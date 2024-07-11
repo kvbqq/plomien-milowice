@@ -15,8 +15,9 @@ const config: Config = {
       },
       colors: {
         "font-white": "#E8EFFF",
-        "banner-start": "#113758",
-        "banner-end": "#174C79",
+        "nav-bg-start": "#113758",
+        "nav-bg-end": "#174C79",
+        "custom-gold": "#C69A0D",
       },
     },
   },

@@ -8,6 +8,10 @@ export const navLinks = [
     href: "/nasi-trenerzy",
   },
   {
+    label: "Klub 100 patronów",
+    href: "/klub-patronow",
+  },
+  {
     label: "Kontakt",
     href: "/kontakt",
   },
