@@ -15,6 +15,7 @@ const config: Config = {
       },
       colors: {
         "font-white": "#E8EFFF",
+        "font-white-hover": "#ADB5C6",
         "nav-bg-start": "#113758",
         "nav-bg-end": "#174C79",
         "custom-gold": "#C69A0D",

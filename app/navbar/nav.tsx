@@ -1,8 +1,12 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 import { navLinks } from "@/constants/constants";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
+import { HiOutlineMenu } from "react-icons/hi";
 import Logo from "@/public/Logo.png";
 
 const NavLogo = () => {
@@ -15,10 +19,12 @@ const NavLogo = () => {
 
 const NavMenu = () => {
   return (
-    <ul className={"w-[800px] flex items-center justify-evenly"}>
+    <ul className={"w-[46rem] w flex items-center justify-evenly"}>
       {navLinks.map((item, i) => (
         <li key={i}>
-          <Link href={item.href}>{item.label}</Link>
+          <Link href={item.href} className={"hover:text-font-white-hover"}>
+            {item.label}
+          </Link>
         </li>
       ))}
     </ul>
@@ -27,22 +33,31 @@ const NavMenu = () => {
 
 const NavButton = () => {
   return (
-    <button className={"px-6 py-3 bg-custom-gold rounded-full"}>
+    <button className={"w-44 py-3 bg-custom-gold rounded-full"}>
       Dołącz do nas
     </button>
   );
 };
 
+const NavMobileHamburger = () => {
+  return (
+    <button>
+      <HiOutlineMenu size={45} color="#C69A0D" />
+    </button>
+  );
+};
+
 export const Nav = () => {
+  const isDesktop = useMediaQuery("(min-width: 768px)");
+
   return (
     <nav
-      className={
-        "py-3 flex items-center justify-center bg-gradient-to-t from-nav-bg-start to-nav-bg-end text-font-white"
-      }
+      className={`h-24 px-5 py-3 flex items-center justify-center bg-gradient-to-t from-nav-bg-start to-nav-bg-end text-font-white ${
+        isDesktop ? "" : "justify-between"
+      }`}
     >
       <NavLogo />
-      <NavMenu />
-      <NavButton />
+      {isDesktop ? [<NavMenu />, <NavButton />] : <NavMobileHamburger />}
     </nav>
   );
 };
