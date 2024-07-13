@@ -48,7 +48,7 @@ const NavMobileHamburger = () => {
 };
 
 export const Nav = () => {
-  const isDesktop = useMediaQuery("(min-width: 768px)");
+  const isDesktop = useMediaQuery("(min-width: 1000px)");
 
   return (
     <nav
