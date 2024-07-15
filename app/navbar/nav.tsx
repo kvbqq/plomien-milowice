@@ -52,7 +52,7 @@ export const Nav = () => {
 
   return (
     <nav
-      className={`h-24 px-5 py-3 flex items-center justify-center bg-gradient-to-t from-nav-bg-start to-nav-bg-end text-font-white ${
+      className={`h-24 w-full px-5 py-3 fixed flex items-center justify-center bg-gradient-to-t from-nav-bg-start to-nav-bg-end text-font-white ${
         isDesktop ? "" : "justify-between"
       }`}
     >
