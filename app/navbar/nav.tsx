@@ -19,7 +19,7 @@ const NavLogo = () => {
 
 const NavMenu = () => {
   return (
-    <ul className={"w-[46rem] w flex items-center justify-evenly"}>
+    <ul className={"w-[46rem] flex items-center justify-evenly"}>
       {navLinks.map((item, i) => (
         <li key={i}>
           <Link href={item.href} className={"hover:text-font-white-hover"}>
