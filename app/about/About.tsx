@@ -2,7 +2,7 @@ const AboutCard = () => {
   return (
     <article
       className={
-        "h-[50%] w-[46rem] bg-no-repeat bg-right-bottom bg-about-card-image rounded-3xl shadow-xl"
+        "h-[50%] w-[46rem] p-10 bg-no-repeat bg-right-bottom bg-about-card-image rounded-3xl shadow-xl"
       }
     >
       <h1>O akademii</h1>
