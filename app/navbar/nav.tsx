@@ -1,12 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 import { navLinks } from "@/constants/constants";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { HiOutlineMenu } from "react-icons/hi";
+import { HiOutlineX } from "react-icons/hi";
 import Logo from "@/public/Logo.png";
 
 const NavLogo = () => {
@@ -14,20 +15,6 @@ const NavLogo = () => {
     <Link href="/">
       <Image src={Logo} alt={"Płomień Milowice"} className="w-14" />
     </Link>
-  );
-};
-
-const NavMenu = () => {
-  return (
-    <ul className={"w-[46rem] flex items-center justify-evenly"}>
-      {navLinks.map((item, i) => (
-        <li key={i}>
-          <Link href={item.href} className={"hover:text-font-white-hover"}>
-            {item.label}
-          </Link>
-        </li>
-      ))}
-    </ul>
   );
 };
 
@@ -39,25 +26,73 @@ const NavButton = () => {
   );
 };
 
-const NavMobileHamburger = () => {
+const NavMenu = () => {
   return (
-    <button>
-      <HiOutlineMenu size={45} color="#C69A0D" />
-    </button>
+    <React.Fragment>
+      <ul className={"w-[46rem] flex items-center justify-evenly"}>
+        {navLinks.map((item, i) => (
+          <li key={i}>
+            <Link href={item.href} className={"hover:text-font-white-hover"}>
+              {item.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <NavButton />
+    </React.Fragment>
+  );
+};
+
+const NavMenuMobile = () => {
+  return (
+    <div className={"w-full pb-10 flex-col text-center"}>
+      <ul className={"pb-10"}>
+        {navLinks.map((item, i) => (
+          <li key={i} className={"py-3"}>
+            <Link href={item.href} className={"hover:text-font-white-hover"}>
+              {item.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <NavButton />
+    </div>
   );
 };
 
 export const Nav = () => {
   const isDesktop = useMediaQuery("(min-width: 1000px)");
+  const [showNav, setNav] = useState(false);
+
+  const toggle = () => {
+    setNav(!showNav);
+  };
 
   return (
     <nav
-      className={`h-24 w-full px-5 py-3 fixed flex items-center justify-center bg-gradient-to-t from-nav-bg-start to-nav-bg-end text-font-white ${
-        isDesktop ? "" : "justify-between"
-      }`}
+      className={
+        "w-full fixed bg-gradient-to-t from-nav-bg-start to-nav-bg-end text-font-white shadow-2xl z-10"
+      }
     >
-      <NavLogo />
-      {isDesktop ? [<NavMenu />, <NavButton />] : <NavMobileHamburger />}
+      <div
+        className={`h-24 px-5 py-3 flex items-center justify-center ${
+          isDesktop ? null : "justify-between"
+        }`}
+      >
+        <NavLogo />
+        {isDesktop ? (
+          <NavMenu />
+        ) : (
+          <button onClick={toggle}>
+            {showNav ? (
+              <HiOutlineX size={45} color="#C69A0D" />
+            ) : (
+              <HiOutlineMenu size={45} color="#C69A0D" />
+            )}
+          </button>
+        )}
+      </div>
+      {showNav && !isDesktop ? <NavMenuMobile /> : null}
     </nav>
   );
 };

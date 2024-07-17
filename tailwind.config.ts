@@ -12,7 +12,8 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "landing-image": "url('../public/landing-bg.png')",
+        "landing-image": "url('../public/landing-bg.webp')",
+        "about-card-image": "url('../public/about-card-bg.png')",
       },
       colors: {
         "font-white": "#E8EFFF",

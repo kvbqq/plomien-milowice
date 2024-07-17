@@ -4,6 +4,8 @@ import { TbHeartPlus } from "react-icons/tb";
 import { MdOutlineTrendingUp } from "react-icons/md";
 import { MdMood } from "react-icons/md";
 
+import { GrTrophy } from "react-icons/gr";
+
 export const navLinks = [
   {
     label: "O akademii",
@@ -43,5 +45,12 @@ export const firstSliderElements = [
   {
     icon: <MdMood size={52} color="#C69A0D" />,
     text: "Dla dzieci i młodzieży w wieku 6-17 lat",
+  },
+];
+
+export const secondSliderElements = [
+  {
+    icon: <GrTrophy size={52} color="#C69A0D" />,
+    text: "Wielokrotna mistrzyni Polski",
   },
 ];
