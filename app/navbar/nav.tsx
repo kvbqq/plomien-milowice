@@ -8,12 +8,12 @@ import { navLinks } from "@/constants/constants";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { HiOutlineMenu } from "react-icons/hi";
 import { HiOutlineX } from "react-icons/hi";
-import Logo from "@/public/Logo.png";
+import Logo from "@/public/logo.webp";
 
 const NavLogo = () => {
   return (
     <Link href="/">
-      <Image src={Logo} alt={"Płomień Milowice"} className="w-14" />
+      <Image src={Logo} alt={"Płomień Milowice"} className="w-14 min-w-14" />
     </Link>
   );
 };
@@ -29,7 +29,7 @@ const NavButton = () => {
 const NavMenu = () => {
   return (
     <React.Fragment>
-      <ul className={"w-[46rem] flex items-center justify-evenly"}>
+      <ul className={"w-[50rem] flex items-center justify-evenly"}>
         {navLinks.map((item, i) => (
           <li key={i}>
             <Link href={item.href} className={"hover:text-font-white-hover"}>
@@ -96,5 +96,3 @@ export const Nav = () => {
     </nav>
   );
 };
-
-export default Nav;

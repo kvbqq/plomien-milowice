@@ -26,7 +26,7 @@ export const Slider = () => {
       }
     >
       {isDesktop ? (
-        <ul className={"w-[68rem] flex items-center justify-evenly"}>
+        <ul className={"w-[70rem] flex items-center justify-evenly"}>
           {firstSliderElements.map((item, i) => (
             <li key={"slider-1-" + i} className={"flex items-center"}>
               {item.icon}
@@ -38,13 +38,13 @@ export const Slider = () => {
         <React.Fragment>
           <button
             onClick={previousSlide}
-            className={"w-20 flex justify-center"}
+            className={"w-80 flex justify-center"}
           >
             {slide == 1 ? null : (
               <HiOutlineChevronLeft size={32} color="#C69A0D" />
             )}
           </button>
-          <ul className={"w-[68rem] flex items-center justify-evenly"}>
+          <ul className={"w-[70rem] flex items-center justify-evenly"}>
             {firstSliderElements.slice(slide - 1, slide).map((item, i) => (
               <li key={"slider-1-" + i} className={"flex items-center"}>
                 {item.icon}
@@ -52,7 +52,7 @@ export const Slider = () => {
               </li>
             ))}
           </ul>
-          <button onClick={nextSlide} className={"w-20 flex justify-center"}>
+          <button onClick={nextSlide} className={"w-80 flex justify-center"}>
             {slide == firstSliderElements.length ? null : (
               <HiOutlineChevronRight size={32} color="#C69A0D" />
             )}

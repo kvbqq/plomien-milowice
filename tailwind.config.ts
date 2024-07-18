@@ -13,7 +13,8 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "landing-image": "url('../public/landing-bg.webp')",
-        "about-card-image": "url('../public/about-card-bg.png')",
+        "landing-card-bg": "url('../public/landing-card-bg.webp')",
+        "about-card-image": "url('../public/about-card-bg.webp')",
       },
       colors: {
         "font-white": "#E8EFFF",
