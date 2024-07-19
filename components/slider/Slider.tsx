@@ -1,11 +1,11 @@
 "use client";
 
+import React, { useState } from "react";
+
 import { firstSliderElements } from "@/constants/constants";
 import { HiOutlineChevronRight } from "react-icons/hi";
 import { HiOutlineChevronLeft } from "react-icons/hi";
-
 import { useMediaQuery } from "@/hooks/useMediaQuery";
-import React, { useState } from "react";
 
 export const Slider = () => {
   const isDesktop = useMediaQuery("(min-width: 1000px)");
@@ -20,7 +20,7 @@ export const Slider = () => {
   };
 
   return (
-    <section
+    <div
       className={
         "h-24 w-full absolute bottom-0 flex items-center justify-center bg-white shadow-lg"
       }
@@ -59,6 +59,6 @@ export const Slider = () => {
           </button>
         </React.Fragment>
       )}
-    </section>
+    </div>
   );
 };

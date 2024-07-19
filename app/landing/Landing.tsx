@@ -33,13 +33,13 @@ const LandingCard = () => {
 
 export const Landing = () => {
   return (
-    <header
+    <section
       className={
         "h-svh min-h-[40rem] bg-cover flex items-center justify-center relative bg-center bg-landing-image"
       }
     >
       <LandingCard />
       <Slider />
-    </header>
+    </section>
   );
 };

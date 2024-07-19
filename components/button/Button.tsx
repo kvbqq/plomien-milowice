@@ -1,13 +1,21 @@
 "use client";
 
-export const Button = ({ text, href }: { text: string; href: string }) => {
+export const Button = ({
+  text,
+  href,
+  style,
+}: {
+  text: string;
+  href: string;
+  style?: string;
+}) => {
   function handleClick() {
-    location.href = "/o-akademii";
+    location.href = `/${href}`;
   }
 
   return (
     <button
-      className={"w-44 py-3 bg-custom-gold text-white rounded-full"}
+      className={`px-8 py-3 bg-custom-gold text-white rounded-full ${style}`}
       onClick={handleClick}
     >
       {text}
