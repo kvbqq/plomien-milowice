@@ -1,5 +1,7 @@
 import Image from "next/image";
+
 import { Button } from "@/components/button/Button";
+import { Slider } from "@/components/slider/Slider";
 
 const AboutCard = () => {
   return (
@@ -25,7 +27,7 @@ const AboutCard = () => {
 const AboutOwner = () => {
   return (
     <article className={"w-[55rem]"}>
-      <h1 className={"text-2xl font-medium"}>
+      <h1 className={"pl-12 text-2xl font-medium"}>
         Założycielka <span className={"text-custom-gold"}>akademii</span>
       </h1>
       <div className={"w-full py-8 flex items-center justify-between"}>
@@ -55,7 +57,7 @@ const AboutOwner = () => {
             oparte na indywidualnym podejściu do zawodnika, pozwala zawodnikom
             osiągać pełny potencjał w sporcie i życiu codziennym.
           </p>
-          <Button text="Poznaj naszych trenerów" href="" />
+          <Button text="Poznaj naszych trenerów" href="nasi-trenerzy" />
         </div>
       </div>
     </article>
@@ -64,9 +66,13 @@ const AboutOwner = () => {
 
 export const About = () => {
   return (
-    <section className={"py-24 flex flex-col items-center space-y-28"}>
+    <section
+      className={"pt-16 pb-32 flex flex-col relative items-center space-y-28"}
+    >
       <AboutCard />
       <AboutOwner />
+      <Slider />
+      {/* <span className="material-symbols-outlined">social_leaderboard</span> */}
     </section>
   );
 };

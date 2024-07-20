@@ -1,24 +1,12 @@
-"use client";
+import Link from "next/link";
 
-export const Button = ({
-  text,
-  href,
-  style,
-}: {
-  text: string;
-  href: string;
-  style?: string;
-}) => {
-  function handleClick() {
-    location.href = `/${href}`;
-  }
-
+export const Button = ({ text, href }: { text: string; href: string }) => {
   return (
-    <button
-      className={`px-8 py-3 bg-custom-gold text-white rounded-full ${style}`}
-      onClick={handleClick}
+    <Link
+      href={`${href}`}
+      className={`px-8 py-3 bg-custom-gold text-white rounded-full`}
     >
       {text}
-    </button>
+    </Link>
   );
 };

@@ -12,12 +12,24 @@ export const Slider = () => {
   const [slide, setSlide] = useState(1);
 
   const previousSlide = () => {
-    setSlide(slide - 1);
+    if (slide - 1 < 1) {
+      setSlide(firstSliderElements.length);
+    } else {
+      setSlide(slide - 1);
+    }
   };
 
   const nextSlide = () => {
-    setSlide(slide + 1);
+    if (slide + 1 > firstSliderElements.length) {
+      setSlide(1);
+    } else {
+      setSlide(slide + 1);
+    }
   };
+
+  const timer = setTimeout(() => {
+    nextSlide();
+  }, 5000);
 
   return (
     <div
@@ -40,9 +52,7 @@ export const Slider = () => {
             onClick={previousSlide}
             className={"w-80 flex justify-center"}
           >
-            {slide == 1 ? null : (
-              <HiOutlineChevronLeft size={32} color="#C69A0D" />
-            )}
+            <HiOutlineChevronLeft size={32} color="#C69A0D" />
           </button>
           <ul className={"w-[70rem] flex items-center justify-evenly"}>
             {firstSliderElements.slice(slide - 1, slide).map((item, i) => (
@@ -53,9 +63,7 @@ export const Slider = () => {
             ))}
           </ul>
           <button onClick={nextSlide} className={"w-80 flex justify-center"}>
-            {slide == firstSliderElements.length ? null : (
-              <HiOutlineChevronRight size={32} color="#C69A0D" />
-            )}
+            <HiOutlineChevronRight size={32} color="#C69A0D" />
           </button>
         </React.Fragment>
       )}
