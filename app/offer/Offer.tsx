@@ -20,9 +20,10 @@ const GroupCard = ({
       <h1 className={"mb-7 text-3xl font-medium"}>{title}</h1>
       <p className={"font-medium"}>Roczniki:</p>
       <ul className={"mt-1 flex space-x-1.5"}>
-        {yearsList?.map((year) => (
+        {yearsList?.map((year, i) => (
           <li
             className={"w-12 text-center text-sm bg-custom-gold rounded-full"}
+            key={i}
           >
             {year}
           </li>
