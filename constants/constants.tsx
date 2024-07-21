@@ -3,8 +3,12 @@ import { MdOutlineSportsVolleyball } from "react-icons/md";
 import { TbHeartPlus } from "react-icons/tb";
 import { MdOutlineTrendingUp } from "react-icons/md";
 import { MdMood } from "react-icons/md";
-
+import { FaMedal } from "react-icons/fa";
 import { GrTrophy } from "react-icons/gr";
+import { MdMoreTime } from "react-icons/md";
+import { PiPlant } from "react-icons/pi";
+
+import { SliderElement } from "@/types/types";
 
 export const navLinks = [
   {
@@ -25,7 +29,7 @@ export const navLinks = [
   },
 ];
 
-export const firstSliderElements = [
+export const firstSliderElements: SliderElement[] = [
   {
     icon: <MdOutlineGroups size={52} color="#C69A0D" />,
     text: "Doświadczona kadra trenerska",
@@ -48,9 +52,21 @@ export const firstSliderElements = [
   },
 ];
 
-export const secondSliderElements = [
+export const secondSliderElements: SliderElement[] = [
   {
-    icon: <GrTrophy size={52} color="#C69A0D" />,
+    icon: <FaMedal size={44} color="#C69A0D" />,
+    text: "10+ medali młodzieżowych Mistrzostw Polski",
+  },
+  {
+    icon: <GrTrophy size={44} color="#C69A0D" />,
     text: "Wielokrotna mistrzyni Polski",
+  },
+  {
+    icon: <MdMoreTime size={52} color="#C69A0D" />,
+    text: "20 lat doświadczenia w trenowaniu młodzieży",
+  },
+  {
+    icon: <PiPlant size={52} color="#C69A0D" />,
+    text: "Gwarantowany rozwój umiejętności i charakteru",
   },
 ];

@@ -2,6 +2,7 @@
 
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { Slider } from "@/components/slider/Slider";
+import { firstSliderElements } from "@/constants/constants";
 
 export const Landing = () => {
   const isDesktop = useMediaQuery("(min-width: 1000px)");
@@ -50,7 +51,7 @@ export const Landing = () => {
           </div>
         </div>
       </article>
-      <Slider />
+      <Slider elements={firstSliderElements} style="bg-white" />
     </section>
   );
 };

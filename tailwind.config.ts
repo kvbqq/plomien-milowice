@@ -15,6 +15,7 @@ const config: Config = {
         "landing-image": "url('../public/landing-bg.webp')",
         "landing-card-bg": "url('../public/landing-card-bg.webp')",
         "about-card-image": "url('../public/about-card-bg.webp')",
+        "offer-bg": "url('../public/offer-bg.webp')",
       },
       colors: {
         "font-white": "#E8EFFF",

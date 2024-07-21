@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { Button } from "@/components/button/Button";
 import { Slider } from "@/components/slider/Slider";
+import { secondSliderElements } from "@/constants/constants";
 
 const AboutCard = () => {
   return (
@@ -67,12 +68,14 @@ const AboutOwner = () => {
 export const About = () => {
   return (
     <section
-      className={"pt-16 pb-32 flex flex-col relative items-center space-y-28"}
+      className={"pt-16 pb-32 flex flex-col relative items-center space-y-20"}
     >
       <AboutCard />
       <AboutOwner />
-      <Slider />
-      {/* <span className="material-symbols-outlined">social_leaderboard</span> */}
+      <Slider
+        elements={secondSliderElements}
+        style="bg-nav-bg-start text-white"
+      />
     </section>
   );
 };

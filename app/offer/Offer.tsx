@@ -14,7 +14,7 @@ const GroupCard = ({
   return (
     <div
       className={
-        "w-[15rem] p-6 text-white bg-gradient-to-t from-nav-bg-start to-nav-bg-end rounded-2xl shadow-2xl"
+        "w-[15rem] p-6 text-white bg-gradient-to-t from-nav-bg-start to-nav-bg-end rounded-2xl shadow-2xl z-[1]"
       }
     >
       <h1 className={"mb-7 text-3xl font-medium"}>{title}</h1>
@@ -34,7 +34,7 @@ const GroupCard = ({
 
 const GroupLogo = () => {
   return (
-    <div className={"w-[15rem] h-[10rem] bg-white -z-10"}>
+    <div className={"w-[15rem] h-[10rem] bg-white"}>
       <Image src={Logo} alt={"Płomień Milowice"} className={"m-auto"} />
     </div>
   );
@@ -42,9 +42,11 @@ const GroupLogo = () => {
 
 export const Offer = () => {
   return (
-    <section className={"flex justify-center"}>
+    <section
+      className={"flex justify-center bg-center bg-no-repeat bg-offer-bg"}
+    >
       <div className={"w-[55rem] p-12"}>
-        <h1 className={"mt-3 mb-9 text-2xl font-medium"}>
+        <h1 className={"mt-3 mb-11 text-2xl font-medium"}>
           Grupy <span className={"text-custom-gold"}>treningowe</span>
         </h1>
         <div
@@ -57,10 +59,10 @@ export const Offer = () => {
           <GroupLogo />
           <GroupCard title="Talent" yearsList={["2007", "2008", "2009"]} />
         </div>
-        <div className={"my-3 flex flex-col items-center space-y-12"}>
+        <div className={"mt-6 mb-3 flex flex-col items-center space-y-7"}>
           <div
             className={
-              "w-[33rem] h-[10rem] flex flex-col items-center justify-center space-y-4 rounded-3xl text-center text-2xl font-medium shadow-2xl"
+              "w-[33rem] h-[10rem] flex flex-col items-center justify-center space-y-4 rounded-3xl text-center text-2xl font-medium bg-white shadow-2xl"
             }
           >
             <h1>

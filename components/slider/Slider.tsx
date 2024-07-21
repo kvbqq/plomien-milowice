@@ -6,41 +6,49 @@ import { firstSliderElements } from "@/constants/constants";
 import { HiOutlineChevronRight } from "react-icons/hi";
 import { HiOutlineChevronLeft } from "react-icons/hi";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
+import { SliderElement } from "@/types/types";
 
-export const Slider = () => {
+export const Slider = ({
+  elements,
+  style,
+}: {
+  elements: SliderElement[];
+  style?: string;
+}) => {
   const isDesktop = useMediaQuery("(min-width: 1000px)");
   const [slide, setSlide] = useState(1);
 
   const previousSlide = () => {
     if (slide - 1 < 1) {
-      setSlide(firstSliderElements.length);
+      setSlide(elements.length);
     } else {
       setSlide(slide - 1);
     }
   };
 
   const nextSlide = () => {
-    if (slide + 1 > firstSliderElements.length) {
+    if (slide + 1 > elements.length) {
       setSlide(1);
     } else {
       setSlide(slide + 1);
     }
   };
 
-  const timer = setTimeout(() => {
-    nextSlide();
-  }, 5000);
+  // const time = setTimeout(() => {
+  //   nextSlide();
+  // }, 5000);
 
   return (
     <div
-      className={
-        "h-24 w-full absolute bottom-0 flex items-center justify-center bg-white shadow-lg"
-      }
+      className={`h-24 w-full absolute bottom-0 flex items-center justify-center shadow-lg ${style}`}
     >
       {isDesktop ? (
         <ul className={"w-[70rem] flex items-center justify-evenly"}>
-          {firstSliderElements.map((item, i) => (
-            <li key={"slider-1-" + i} className={"flex items-center"}>
+          {elements.map((item, i) => (
+            <li
+              key={`slider-${item.text}-` + i}
+              className={"flex items-center"}
+            >
               {item.icon}
               <p className={"w-28 pl-4 text-xs font-medium"}>{item.text}</p>
             </li>
@@ -55,8 +63,11 @@ export const Slider = () => {
             <HiOutlineChevronLeft size={32} color="#C69A0D" />
           </button>
           <ul className={"w-[70rem] flex items-center justify-evenly"}>
-            {firstSliderElements.slice(slide - 1, slide).map((item, i) => (
-              <li key={"slider-1-" + i} className={"flex items-center"}>
+            {elements.slice(slide - 1, slide).map((item, i) => (
+              <li
+                key={`slider-${item.text}-` + i}
+                className={"flex items-center"}
+              >
                 {item.icon}
                 <p className={"w-28 pl-4 text-xs font-medium"}>{item.text}</p>
               </li>
