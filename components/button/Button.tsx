@@ -1,10 +1,15 @@
 import Link from "next/link";
 
-export const Button = ({ text, href }: { text: string; href: string }) => {
+interface ButtonProps {
+  text: string;
+  href: string;
+}
+
+export const Button: React.FC<ButtonProps> = ({ text, href }) => {
   return (
     <Link
       href={`${href}`}
-      className={`px-8 py-3 bg-custom-gold text-white rounded-full hover:bg-black`}
+      className={`px-8 py-3 bg-custom-gold text-white rounded-full`}
     >
       {text}
     </Link>

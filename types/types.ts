@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 
-export type SliderElement = {
+export interface SliderElement {
+  id: number;
   icon: ReactNode;
   text: string;
-};
+}

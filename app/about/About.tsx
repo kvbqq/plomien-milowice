@@ -1,15 +1,22 @@
+"use client";
+
 import Image from "next/image";
 
 import { Button } from "@/components/button/Button";
 import { Slider } from "@/components/slider/Slider";
 import { secondSliderElements } from "@/constants/constants";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 const AboutCard = () => {
+  const isDesktop = useMediaQuery("(min-width: 1000px)");
+
   return (
     <article
-      className={
-        "h-[26rem] w-[55rem] p-14 bg-no-repeat bg-cover bg-right-bottom bg-about-card-image rounded-3xl shadow-2xl"
-      }
+      className={`h-[24rem] p-14 rounded-3xl shadow-2xl ${
+        isDesktop
+          ? "w-[55rem] bg-no-repeat bg-cover bg-right-bottom bg-about-card-image"
+          : "w-[90%]"
+      }`}
     >
       <h1 className={"text-2xl font-medium"}>O akademii</h1>
       <h2 className={"mt-5 mb-2 text-lg font-medium"}>
@@ -52,11 +59,17 @@ const AboutOwner = () => {
           <p className={"w-[30rem] p-8 rounded-3xl shadow-2xl"}>
             <span className={"font-semibold"}>Agata Kopczyk</span> to{" "}
             <span className={"text-custom-gold"}>serce i dusza akademii</span>,
-            wychowanka Płomienia Milowice, wielokrotna reprezentankta Polski i
-            medalistka mistrzostw Polski. Wielokrotnie doprowadziła drużyny
-            młodzieżowe do triumfów na Mistrzostwach Polski. Jej podejście,
-            oparte na indywidualnym podejściu do zawodnika, pozwala zawodnikom
-            osiągać pełny potencjał w sporcie i życiu codziennym.
+            wychowanka Płomienia Milowice, wielokrotna{" "}
+            <span className={"text-custom-gold"}>
+              reprezentankta Polski i medalistka mistrzostw Polski
+            </span>
+            . Wielokrotnie doprowadziła drużyny młodzieżowe do{" "}
+            <span className={"text-custom-gold"}>
+              triumfów na Mistrzostwach Polski
+            </span>
+            . Jej podejście, oparte na indywidualnym podejściu do zawodnika,
+            pozwala zawodnikom osiągać pełny potencjał w sporcie i życiu
+            codziennym.
           </p>
           <Button text="Poznaj naszych trenerów" href="nasi-trenerzy" />
         </div>
@@ -68,7 +81,9 @@ const AboutOwner = () => {
 export const About = () => {
   return (
     <section
-      className={"pt-16 pb-32 flex flex-col relative items-center space-y-20"}
+      className={
+        "pt-16 pb-32 flex flex-col relative items-center space-y-20 bg-white"
+      }
     >
       <AboutCard />
       <AboutOwner />

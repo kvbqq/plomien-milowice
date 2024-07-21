@@ -71,7 +71,7 @@ export const Nav = () => {
   return (
     <nav
       className={
-        "w-full fixed bg-gradient-to-t from-nav-bg-start to-nav-bg-end text-font-white shadow-2xl z-10"
+        "w-full fixed bg-gradient-to-t from-nav-bg-start to-nav-bg-end text-font-white shadow-2xl z-20"
       }
     >
       <div

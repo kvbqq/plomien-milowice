@@ -2,19 +2,20 @@
 
 import React, { useState } from "react";
 
-import { firstSliderElements } from "@/constants/constants";
+// ICONS
 import { HiOutlineChevronRight } from "react-icons/hi";
 import { HiOutlineChevronLeft } from "react-icons/hi";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
+
+// TYPES
 import { SliderElement } from "@/types/types";
 
-export const Slider = ({
-  elements,
-  style,
-}: {
+interface SliderProps {
   elements: SliderElement[];
   style?: string;
-}) => {
+}
+
+export const Slider: React.FC<SliderProps> = ({ elements, style }) => {
   const isDesktop = useMediaQuery("(min-width: 1000px)");
   const [slide, setSlide] = useState(1);
 
@@ -40,15 +41,12 @@ export const Slider = ({
 
   return (
     <div
-      className={`h-24 w-full absolute bottom-0 flex items-center justify-center shadow-lg ${style}`}
+      className={`h-24 w-full absolute bottom-0 flex items-center justify-center shadow-lg z-10 ${style}`}
     >
       {isDesktop ? (
         <ul className={"w-[70rem] flex items-center justify-evenly"}>
           {elements.map((item, i) => (
-            <li
-              key={`slider-${item.text}-` + i}
-              className={"flex items-center"}
-            >
+            <li key={`slider-${item.id}-` + i} className={"flex items-center"}>
               {item.icon}
               <p className={"w-28 pl-4 text-xs font-medium"}>{item.text}</p>
             </li>
@@ -65,7 +63,7 @@ export const Slider = ({
           <ul className={"w-[70rem] flex items-center justify-evenly"}>
             {elements.slice(slide - 1, slide).map((item, i) => (
               <li
-                key={`slider-${item.text}-` + i}
+                key={`slider-${item.id}-` + i}
                 className={"flex items-center"}
               >
                 {item.icon}

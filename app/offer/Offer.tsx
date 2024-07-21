@@ -43,7 +43,9 @@ const GroupLogo = () => {
 export const Offer = () => {
   return (
     <section
-      className={"flex justify-center bg-center bg-no-repeat bg-offer-bg"}
+      className={
+        "flex justify-center bg-center bg-no-repeat bg-offer-bg bg-white"
+      }
     >
       <div className={"w-[55rem] p-12"}>
         <h1 className={"mt-3 mb-11 text-2xl font-medium"}>
