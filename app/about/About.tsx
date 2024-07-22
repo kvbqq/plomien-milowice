@@ -18,7 +18,7 @@ const AboutCard = () => {
           : "w-[90%]"
       }`}
     >
-      <h1 className={"text-2xl font-medium"}>O akademii</h1>
+      <h1 className={"text-2xl font-semibold"}>O akademii</h1>
       <h2 className={"mt-5 mb-2 text-lg font-medium"}>
         Nasza <span className={"text-custom-gold"}>misja</span>
       </h2>
@@ -35,7 +35,7 @@ const AboutCard = () => {
 const AboutOwner = () => {
   return (
     <article className={"w-[55rem]"}>
-      <h1 className={"pl-12 text-2xl font-medium"}>
+      <h1 className={"pl-12 text-2xl font-semibold"}>
         Założycielka <span className={"text-custom-gold"}>akademii</span>
       </h1>
       <div className={"w-full py-8 flex items-center justify-between"}>

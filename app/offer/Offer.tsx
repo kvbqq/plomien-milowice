@@ -49,7 +49,7 @@ export const Offer = () => {
       }
     >
       <div className={"w-[55rem] p-12"}>
-        <h1 className={"mt-3 mb-11 text-2xl font-medium"}>
+        <h1 className={"mt-3 mb-11 text-2xl font-semibold"}>
           Grupy <span className={"text-custom-gold"}>treningowe</span>
         </h1>
         <div

@@ -14,7 +14,7 @@ export const Landing = () => {
       }
     >
       <article
-        className={`flex items-center justify-center bg-nav-bg-start/[.8] backdrop-blur-sm rounded-3xl text-white ${
+        className={`flex items-center justify-center bg-gradient-to-t from-nav-bg-start/[.25] to-nav-bg-end/[.25] backdrop-blur-md rounded-3xl text-white shadow-2xl ${
           isDesktop ? "h-[30rem] w-[55rem]" : "h-[60%] w-[90%]"
         }`}
       >

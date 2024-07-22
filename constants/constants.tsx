@@ -35,27 +35,27 @@ export const navLinks = [
 export const firstSliderElements: SliderElement[] = [
   {
     id: 1,
-    icon: <MdOutlineGroups size={52} color="#C69A0D" />,
+    icon: <MdOutlineGroups size={42} color="#C69A0D" />,
     text: "Doświadczona kadra trenerska",
   },
   {
     id: 2,
-    icon: <MdOutlineSportsVolleyball size={52} color="#C69A0D" />,
+    icon: <MdOutlineSportsVolleyball size={42} color="#C69A0D" />,
     text: "Rozwój umiejętności siatkarskich",
   },
   {
     id: 3,
-    icon: <TbHeartPlus size={52} color="#C69A0D" />,
+    icon: <TbHeartPlus size={42} color="#C69A0D" />,
     text: "Promowanie zdrowego trybu życia",
   },
   {
     id: 4,
-    icon: <MdOutlineTrendingUp size={52} color="#C69A0D" />,
+    icon: <MdOutlineTrendingUp size={42} color="#C69A0D" />,
     text: "Indywidualne podejście do zawodnika",
   },
   {
     id: 5,
-    icon: <MdMood size={52} color="#C69A0D" />,
+    icon: <MdMood size={42} color="#C69A0D" />,
     text: "Dla dzieci i młodzieży w wieku 6-17 lat",
   },
 ];
@@ -63,22 +63,22 @@ export const firstSliderElements: SliderElement[] = [
 export const secondSliderElements: SliderElement[] = [
   {
     id: 6,
-    icon: <LiaMedalSolid size={52} color="#C69A0D" />,
+    icon: <LiaMedalSolid size={42} color="#C69A0D" />,
     text: "10+ medali młodzieżowych Mistrzostw Polski",
   },
   {
     id: 7,
-    icon: <GrTrophy size={44} color="#C69A0D" />,
+    icon: <GrTrophy size={34} color="#C69A0D" />,
     text: "Wielokrotna mistrzyni Polski",
   },
   {
     id: 8,
-    icon: <MdMoreTime size={52} color="#C69A0D" />,
+    icon: <MdMoreTime size={42} color="#C69A0D" />,
     text: "20 lat doświadczenia w trenowaniu młodzieży",
   },
   {
     id: 9,
-    icon: <PiPlant size={52} color="#C69A0D" />,
+    icon: <PiPlant size={42} color="#C69A0D" />,
     text: "Gwarantowany rozwój umiejętności i charakteru",
   },
 ];

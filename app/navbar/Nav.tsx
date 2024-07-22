@@ -9,6 +9,7 @@ import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { HiOutlineMenu } from "react-icons/hi";
 import { HiOutlineX } from "react-icons/hi";
 import Logo from "@/public/logo.webp";
+import { Button } from "@/components/button/Button";
 
 const NavLogo = () => {
   return (
@@ -32,13 +33,16 @@ const NavMenu = () => {
       <ul className={"w-[50rem] flex items-center justify-evenly"}>
         {navLinks.map((item, i) => (
           <li key={i}>
-            <Link href={item.href} className={"hover:text-font-white-hover"}>
+            <Link
+              href={item.href}
+              className={"font-medium hover:text-font-white-hover"}
+            >
               {item.label}
             </Link>
           </li>
         ))}
       </ul>
-      <NavButton />
+      <Button text="Dołącz do nas" href="" style="min-w-48" />
     </React.Fragment>
   );
 };

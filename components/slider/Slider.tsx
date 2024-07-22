@@ -44,11 +44,13 @@ export const Slider: React.FC<SliderProps> = ({ elements, style }) => {
       className={`h-24 w-full absolute bottom-0 flex items-center justify-center shadow-lg z-10 ${style}`}
     >
       {isDesktop ? (
-        <ul className={"w-[70rem] flex items-center justify-evenly"}>
+        <ul className={"w-[60rem] flex items-center justify-evenly"}>
           {elements.map((item, i) => (
             <li key={`slider-${item.id}-` + i} className={"flex items-center"}>
               {item.icon}
-              <p className={"w-28 pl-4 text-xs font-medium"}>{item.text}</p>
+              <p className={"w-24 pl-2 text-[0.65rem] font-semibold"}>
+                {item.text}
+              </p>
             </li>
           ))}
         </ul>
