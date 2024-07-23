@@ -12,17 +12,25 @@ const AboutCard = () => {
 
   return (
     <article
-      className={`h-[24rem] p-14 rounded-3xl shadow-2xl ${
+      className={`rounded-3xl shadow-2xl ${
         isDesktop
-          ? "w-[55rem] bg-no-repeat bg-cover bg-right-bottom bg-about-card-image"
-          : "w-[90%]"
+          ? "w-[55rem] p-14 bg-no-repeat bg-cover bg-right-bottom bg-about-card-image"
+          : "w-[90%] px-10 py-14 text-center"
       }`}
     >
-      <h1 className={"text-2xl font-semibold"}>O akademii</h1>
-      <h2 className={"mt-5 mb-2 text-lg font-medium"}>
+      <h1
+        className={`text-2xl font-semibold ${isDesktop ? null : "text-center"}`}
+      >
+        O akademii
+      </h1>
+      <h2
+        className={`mt-5 mb-2 text-lg font-medium ${
+          isDesktop ? null : "text-center"
+        }`}
+      >
         Nasza <span className={"text-custom-gold"}>misja</span>
       </h2>
-      <p className={"w-[26rem] mb-10"}>
+      <p className={`mb-10 ${isDesktop ? "w-[26rem]" : "text-center"}`}>
         Kształcimy młodych sportowców, promując zdrowy styl życia i wartości
         społeczne w Milowicach. Tworzymy inspirujące środowisko, gdzie pasja,
         dyscyplina i współpraca prowadzą do sukcesów.
@@ -33,19 +41,24 @@ const AboutCard = () => {
 };
 
 const AboutOwner = () => {
+  const isDesktop = useMediaQuery("(min-width: 1000px)");
+
   return (
-    <article className={"w-[55rem]"}>
-      <h1 className={"pl-12 text-2xl font-semibold"}>
+    <article className={`${isDesktop ? "w-[55rem]" : "text-center"}`}>
+      <h1 className={`text-2xl font-semibold ${isDesktop ? "pl-12" : null}`}>
         Założycielka <span className={"text-custom-gold"}>akademii</span>
       </h1>
-      <div className={"w-full py-8 flex items-center justify-between"}>
+      <div
+        className={`w-full py-8 flex items-center justify-between ${
+          isDesktop ? "" : "flex-col space-y-10"
+        }`}
+      >
         <div className={"flex flex-col items-center justify-center"}>
           <Image
             src={"/about-owner.png"}
             alt="Agata Kopczyk"
-            width={1000}
-            height={1000}
-            style={{ width: "auto", height: "100%" }}
+            width={350}
+            height={200}
           />
           <div
             className={
@@ -56,7 +69,11 @@ const AboutOwner = () => {
           </div>
         </div>
         <div className={"flex flex-col space-y-8 items-center justify-center"}>
-          <p className={"w-[30rem] p-8 rounded-3xl shadow-2xl"}>
+          <p
+            className={`p-8 rounded-3xl shadow-2xl ${
+              isDesktop ? "w-[30rem]" : "w-[90%]"
+            }`}
+          >
             <span className={"font-semibold"}>Agata Kopczyk</span> to{" "}
             <span className={"text-custom-gold"}>serce i dusza akademii</span>,
             wychowanka Płomienia Milowice, wielokrotna{" "}
