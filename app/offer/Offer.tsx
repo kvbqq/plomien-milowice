@@ -24,7 +24,9 @@ const GroupCard = ({
       }`}
     >
       <h1
-        className={`flex-1 text-3xl font-medium ${isDesktop ? "mb-7" : null}`}
+        className={`flex-1 font-medium ${
+          isDesktop ? "mb-7 text-3xl" : "text-2xl"
+        }`}
       >
         {title}
       </h1>
@@ -78,8 +80,8 @@ export const Offer = () => {
           }`}
         >
           <GroupCard title="Skrzat" yearsList={["2016", "2017", "2018"]} />
-          <GroupCard title="Kinder" yearsList={["2014", "2015"]} />
-          <GroupCard title="Kinder+" yearsList={["2012", "2013"]} />
+          <GroupCard title="Płomyk" yearsList={["2014", "2015"]} />
+          <GroupCard title="Kinder" yearsList={["2012", "2013"]} />
           <GroupCard title="Młodzik" yearsList={["2010", "2011"]} />
           {isDesktop ? <GroupLogo /> : null}
           <GroupCard title="Talent" yearsList={["2007", "2008", "2009"]} />

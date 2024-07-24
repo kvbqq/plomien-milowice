@@ -14,6 +14,7 @@ export const ContactFooter = () => {
 
   return (
     <footer
+      id="kontakt"
       className={
         "py-20 flex justify-center bg-gradient-to-t from-nav-bg-start to-nav-bg-end"
       }
@@ -42,7 +43,11 @@ export const ContactFooter = () => {
               />
               505 518 713
             </p>
-            <p className={"flex items-center font-semibold tracking-wider"}>
+            <p
+              className={`flex items-center font-semibold tracking-wider ${
+                isDesktop ? null : ""
+              }`}
+            >
               <MdOutlineEmail
                 size={28}
                 color="#C69A0D"
@@ -63,7 +68,7 @@ export const ContactFooter = () => {
             </div>
           </div>
         </div>
-        <div className={`flex  ${isDesktop ? "space-x-20" : "space-x-14"}`}>
+        <div className={`flex  ${isDesktop ? "space-x-20" : "space-x-12"}`}>
           <div>
             <h1 className={"mb-5 text-xl font-semibold"}>Akademia</h1>
             <div className={"flex flex-col space-y-2 font-thin text-sm"}>
