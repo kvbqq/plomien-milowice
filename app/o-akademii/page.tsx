@@ -4,6 +4,10 @@ import Image from "next/image";
 
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 
+const PillarCard = () => {
+  return <div></div>;
+};
+
 export default function About() {
   const isDesktop = useMediaQuery("(min-width: 1000px)");
 
