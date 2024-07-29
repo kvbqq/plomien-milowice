@@ -89,16 +89,32 @@ export default function About() {
           <h1 className={"py-10 text-2xl font-semibold"}>
             Profesjonalne obiekty sportowe
           </h1>
-          <p>
+          <p className={"mb-5"}>
             Nasze zajęcia odbywają się w nowoczesnych obiektach sportowych,
             które zapewniają komfort i bezpieczeństwo podczas treningów.
             Posiadamy przestronne hale z profesjonalnym wyposażeniem, co pozwala
             na efektywne i przyjemne prowadzenie zajęć sportowych.
           </p>
+          <div className={`${isDesktop ? "flex justify-between" : ""}`}>
+            <Image
+              src={"https://plomienmilowice.pl/about-hala-1.webp"}
+              alt="hala sportowa"
+              width={432}
+              height={250}
+              className="rounded-2xl"
+            />
+            <Image
+              src={"https://plomienmilowice.pl/about-hala-2.webp"}
+              alt="hala sportowa"
+              width={432}
+              height={250}
+              className="rounded-2xl"
+            />
+          </div>
         </article>
         <article className={`${isDesktop ? "w-[55rem]" : ""}`}>
           <h1 className={"py-10 text-2xl font-semibold"}>Regionalizm</h1>
-          <p>
+          <p className={"mb-5"}>
             Sosnowiec to nie tylko nasza lokalizacja, to serce naszej akademii,
             źródło pasji i duma każdego zawodnika Płomienia Milowice. Miasto
             bogate w historię, tradycję i talent stanowi niezwykłe tło dla
@@ -107,6 +123,13 @@ export default function About() {
             nasz dom, gdzie rozwijamy się nie tylko jako zawodnicy, ale także
             jako ludzie.
           </p>
+          <Image
+            src={"https://plomienmilowice.pl/about-milowice.webp"}
+            alt="hala sportowa"
+            height={270}
+            width={880}
+            className="rounded-2xl"
+          />
         </article>
       </section>
     </main>
