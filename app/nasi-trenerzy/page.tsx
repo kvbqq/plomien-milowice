@@ -22,7 +22,7 @@ const CoachCard: React.FC<CoachCardProps> = ({ image, name, text, isEven }) => {
       <div
         className={`flex ${
           isEven ? "flex-row-reverse pr-8" : "pl-8"
-        } jsutify-between py-8 z-10 bg-white bg-opacity-30 backdrop-blur-xl rounded-2xl border border-gray-100 shadow-lg`}
+        } jsutify-between py-8 z-10 bg-white bg-opacity-30 backdrop-blur-xl rounded-2xl border border-gray-200 border-opacity-40 shadow-lg`}
       >
         <h1 className="w-3/5 text-justify">{text}</h1>
         <div className={"w-2/5 flex relative justify-center"}>
@@ -55,9 +55,11 @@ export default function CoachesInfo() {
   return (
     <main>
       <section
-        className={"pt-44 pb-28 flex flex-col gap-10 items-center bg-white"}
+        className={"pt-36 pb-28 flex flex-col gap-10 items-center bg-white"}
       >
-        <h1 className={"w-[55rem] text-2xl font-semibold"}>Nasi trenerzy</h1>
+        <h1 className={"w-[55rem] pt-10 text-2xl font-semibold"}>
+          Nasi trenerzy
+        </h1>
         <CoachCard
           image="https://plomienmilowice.pl/agata-kopczyk.jpg"
           name="Agata Kopczyk"
@@ -81,6 +83,12 @@ export default function CoachesInfo() {
           name="Nadia Peszko"
           text="Trenerka Nadia Peszko jest absolwentką psychologii na Uniwersytecie SWPS ze specjalizacją psychologii sportu i aktywności fizycznej oraz studiów podyplomowych z psychologii sportu na Poznańskim AWF. Posiada bogate doświadczenie w pracy indywidualnej, jako członek sztabów szkoleniowych i dydaktyk na uczelniach wyższych. Współpracuje ze sportowcami na różnym etapie kariery i poziomie zaawansowania. W przeszłości była reprezentantką klubów Polskiej Ligi Siatkówki, młodzieżową reprezentantką Polski i medalistką Mistrzostw Polski. W Akademii Siatkówki Płomień Milowice trenerka Nadia pracuje zarówno z zawodnikami, jak i ich rodzicami, wspierając rozwój mentalny młodych sportowców."
           isEven={true}
+        />
+        <CoachCard
+          image="https://plomienmilowice.pl/angelika.png"
+          name="Angelika Danielik"
+          text="Trenerka Angelika Danielik to młoda, ambitna trenerka, która wnosi do Akademii świeżość i nowoczesne podejście. Ukończyła studia I stopnia na AWF w Katowicach na kierunku Sport, specjalizując się w przygotowaniu motorycznym, i kontynuuje naukę na kierunku Wychowanie Fizyczne. Jej wiedza oraz umiejętności, potwierdzone certyfikatem trenera piłki siatkowej PZPS, umożliwiają jej prowadzenie treningów na wysokim poziomie. Jako była zawodniczka MUKS Dargfil Tomaszów Mazowiecki, osiągnęła liczne sukcesy w siatkówce młodzieżowej, w tym Wicemistrzostwo Polski Kadetek. Trenerka Angelika doskonale rozumie potrzeby młodych sportowców, a jej profesjonalne podejście łączy z entuzjazmem, co sprawia, że treningi z nią są nie tylko efektywne, ale także bardzo inspirujące."
+          isEven={false}
         />
       </section>
     </main>
