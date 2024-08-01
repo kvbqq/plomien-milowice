@@ -35,7 +35,7 @@ const CoachCard: React.FC<CoachCardProps> = ({ image, name, text, isEven }) => {
           />
           <h1
             className={
-              "absolute bottom-0 bg-nav-bg-start py-4 px-10 text-white font-medium rounded-xl"
+              "w-[75%] text-center absolute bottom-0 bg-nav-bg-start py-4 text-white font-medium rounded-2xl"
             }
           >
             {name}
