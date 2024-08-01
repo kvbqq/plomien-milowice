@@ -22,7 +22,7 @@ const CoachCard: React.FC<CoachCardProps> = ({ image, name, text, isEven }) => {
       <div
         className={`flex ${
           isEven ? "flex-row-reverse pr-8" : "pl-8"
-        } jsutify-between py-8 z-10 bg-white bg-opacity-30 backdrop-blur-xl rounded-2xl border border-gray-300 shadow-lg`}
+        } jsutify-between py-8 z-10 bg-white bg-opacity-30 backdrop-blur-xl rounded-2xl border border-gray-100 shadow-lg`}
       >
         <h1 className="w-3/5 text-justify">{text}</h1>
         <div className={"w-2/5 flex relative justify-center"}>

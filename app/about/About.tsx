@@ -12,7 +12,7 @@ const AboutCard = () => {
 
   return (
     <article
-      className={`rounded-3xl shadow-2xl ${
+      className={`rounded-3xl border border-gray-100 shadow-lg ${
         isDesktop
           ? "w-[55rem] p-14 bg-no-repeat bg-cover bg-right-bottom bg-about-card-image"
           : "w-[90%] px-10 py-14 text-center"
@@ -70,7 +70,7 @@ const AboutOwner = () => {
         </div>
         <div className={"flex flex-col space-y-8 items-center justify-center"}>
           <p
-            className={`p-8 rounded-3xl shadow-2xl ${
+            className={`p-8 rounded-3xl border border-gray-100 shadow-lg ${
               isDesktop ? "w-[30rem]" : "w-[90%]"
             }`}
           >

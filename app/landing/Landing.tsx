@@ -14,7 +14,7 @@ export const Landing = () => {
       }
     >
       <article
-        className={`flex items-center justify-center bg-gradient-to-t from-nav-bg-start/[.25] to-nav-bg-end/[.25] backdrop-blur-md rounded-3xl text-white shadow-2xl ${
+        className={`flex items-center justify-center bg-gradient-to-t from-nav-bg-start[.25] to-nav-bg-end[.25] bg-clip-padding backdrop-filter backdrop-blur-md rounded-3xl text-white border border-gray-400 border-opacity-10 shadow-xl ${
           isDesktop ? "h-[30rem] w-[55rem]" : "h-[60%] w-[90%]"
         }`}
       >

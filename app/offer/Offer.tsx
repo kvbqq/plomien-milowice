@@ -88,7 +88,7 @@ export const Offer = () => {
         </div>
         <div className={"mt-6 mb-3 flex flex-col items-center space-y-7"}>
           <div
-            className={`h-[10rem] flex flex-col items-center justify-center space-y-4 rounded-3xl text-center text-2xl font-medium bg-white shadow-2xl ${
+            className={`h-[10rem] flex flex-col items-center justify-center space-y-4 rounded-3xl text-center text-2xl font-medium bg-white border border-gray-100 shadow-lg ${
               isDesktop ? "w-[33rem]" : "w-[90%] max-w-[33rem]"
             }`}
           >
