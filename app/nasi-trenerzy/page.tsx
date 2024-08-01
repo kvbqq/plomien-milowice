@@ -57,6 +57,7 @@ export default function CoachesInfo() {
       <section
         className={"pt-44 pb-28 flex flex-col gap-10 items-center bg-white"}
       >
+        <h1 className={"w-[55rem] text-2xl font-semibold"}>Nasi trenerzy</h1>
         <CoachCard
           image="https://plomienmilowice.pl/agata-kopczyk.jpg"
           name="Agata Kopczyk"
@@ -70,7 +71,7 @@ export default function CoachesInfo() {
           isEven={true}
         />
         <CoachCard
-          image="https://plomienmilowice.pl/paulina-baltrukiewicz.jpg"
+          image="https://plomienmilowice.pl/paulina-baltrukiewicz.png"
           name="Paulina Bałtrukiewicz"
           text="Trenerka Paulina Bałtrukiewicz w naszej akademii specjalizuje się w poprawie koordynacji i motoryki zawodników. Ukończyła Akademię Wychowania Fizycznego w Katowicach, zdobywając specjalizacje z wychowania fizycznego i gimnastyki korekcyjnej. Od wielu lat pracuje jako trenerka przygotowania motorycznego Zdobyła doświadczenie jako II trenerka piłki siatkowej Kadry Śląska Młodziczek rocznika 2009 oraz jako obecna trenerka przygotowania motorycznego Kadry Polski U15 Młodziczek. Jej nowoczesne metody treningowe pomagają zawodnikom poprawić ich koordynację i kondycję. Trenerka Paulina znana jest z indywidualnego podejścia do każdego podopiecznego, co pozwala na dostosowanie treningów do ich potrzeb i możliwości."
           isEven={false}
