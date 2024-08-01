@@ -1,7 +1,9 @@
 export default function CoachesInfo() {
   return (
     <main>
-      <h1>Nasi Trenerzy</h1>
+      <section
+        className={"py-28 flex flex-col gap-24 items-center bg-white"}
+      ></section>
     </main>
   );
 }

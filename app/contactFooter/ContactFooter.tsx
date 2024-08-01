@@ -59,7 +59,7 @@ export const ContactFooter = () => {
           <div>
             <h1 className={"mb-5 text-xl font-semibold"}>Social Media</h1>
             <div className={"flex items-center space-x-3"}>
-              <Link href={""}>
+              <Link href={"https://www.facebook.com/akademiaplomienmilowice"}>
                 <FaFacebookSquare size={28} color="#C69A0D" />
               </Link>
               <Link href={""}>

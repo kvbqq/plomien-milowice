@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["plomienmilowice.pl"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "plomienmilowice.pl",
+      },
+    ],
   },
 };
 

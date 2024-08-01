@@ -128,7 +128,7 @@ export default function About() {
             alt="hala sportowa"
             height={270}
             width={880}
-            className="rounded-2xl"
+            className="h-[270px] rounded-2xl"
           />
         </article>
       </section>
