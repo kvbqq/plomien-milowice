@@ -80,8 +80,8 @@ export const ContactFooter = () => {
           <div>
             <h1 className={"mb-5 text-xl font-semibold"}>Dokumenty</h1>
             <div className={"flex flex-col space-y-2 font-thin text-sm"}>
-              <Link href={""}>Regulamin</Link>
-              <Link href={""}>Polityka prywatności</Link>
+              <Link href={"/regulamin"}>Regulamin</Link>
+              <Link href={"/polityka-prywatnosci"}>Polityka prywatności</Link>
             </div>
           </div>
         </div>
