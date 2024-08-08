@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -19,14 +19,6 @@ const NavLogo = () => {
   );
 };
 
-const NavButton = () => {
-  return (
-    <button className={"w-44 py-3 bg-custom-gold rounded-full"}>
-      Dołącz do nas
-    </button>
-  );
-};
-
 const NavMenu = () => {
   return (
     <React.Fragment>
@@ -42,7 +34,7 @@ const NavMenu = () => {
           </li>
         ))}
       </ul>
-      <Button text="Dołącz do nas" href="" style="min-w-48" />
+      <Button text="Dołącz do nas" href="zapisy" style="min-w-48" />
     </React.Fragment>
   );
 };
@@ -59,7 +51,7 @@ const NavMenuMobile = () => {
           </li>
         ))}
       </ul>
-      <NavButton />
+      <Button text="Dołącz do nas" href="zapisy" style="min-w-48" />
     </div>
   );
 };

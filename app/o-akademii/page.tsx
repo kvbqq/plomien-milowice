@@ -31,10 +31,20 @@ export default function About() {
   return (
     <main className="overflow-hidden">
       <section className={"pb-28 flex flex-col gap-24 items-center bg-white"}>
-        <article className={`pt-36 ${isDesktop ? "w-[55rem]" : ""}`}>
-          <h1 className={"py-10 text-2xl font-semibold"}>O akademii</h1>
-          <div className={`w-full flex items-end ${isDesktop ? "" : ""}`}>
-            <p className={`${isDesktop ? "pr-24" : ""}`}>
+        <article className={`pt-36 ${isDesktop ? "w-[55rem]" : "w-[90%]"}`}>
+          <h1
+            className={`py-10 text-2xl font-semibold ${
+              isDesktop ? "" : "text-center"
+            }`}
+          >
+            O akademii
+          </h1>
+          <div
+            className={`w-full flex items-end ${
+              isDesktop ? "" : "flex-col items-center gap-8"
+            }`}
+          >
+            <p className={`${isDesktop ? "pr-24" : "text-center"}`}>
               <span className="text-custom-gold">Płomień Milowice</span> to
               akademia, w której każdy zawodnik znajdzie wsparcie i inspirację
               do rozwijania swoich pasji i umiejętności. Nasza Akademia ma być
@@ -56,18 +66,24 @@ export default function About() {
             />
           </div>
         </article>
-        <article className={`${isDesktop ? "w-[55rem]" : ""}`}>
+        <article className={`${isDesktop ? "w-[55rem]" : "w-[90%]"}`}>
           <div className={"flex flex-col items-center space-y-5"}>
             <h1 className={"text-2xl font-semibold text-custom-gold"}>
               Filary treningu w akademii
             </h1>
-            <p className={"w-[40rem] text-center"}>
+            <p className={`text-center ${isDesktop ? "w-[40rem]" : "w-[90%]"}`}>
               Zróżnicowany rozwój młodzieży na każdej płaszczyźnie jest dla nas
               niezwykle <br /> ważny, dlatego dbamy o wszechstronne
               kształtowanie umiejętności <br /> i charakteru naszych zawodników.
             </p>
           </div>
-          <div className={"mt-8 flex justify-between gap-4"}>
+          <div
+            className={`mt-8 flex ${
+              isDesktop
+                ? "justify-between gap-4"
+                : "flex-col justify-center items-center gap-8"
+            }`}
+          >
             <PillarCard
               icon={<MdOutlineSportsVolleyball size={48} color="#C69A0D" />}
               title="Treningi siatkarskie"
@@ -85,7 +101,9 @@ export default function About() {
             />
           </div>
         </article>
-        <article className={`${isDesktop ? "w-[55rem]" : ""}`}>
+        <article
+          className={`${isDesktop ? "w-[55rem]" : "w-[90%] text-center"}`}
+        >
           <h1 className={"py-10 text-2xl font-semibold"}>
             Profesjonalne obiekty sportowe
           </h1>
@@ -95,7 +113,11 @@ export default function About() {
             Posiadamy przestronne hale z profesjonalnym wyposażeniem, co pozwala
             na efektywne i przyjemne prowadzenie zajęć sportowych.
           </p>
-          <div className={`${isDesktop ? "flex justify-between" : ""}`}>
+          <div
+            className={`flex ${
+              isDesktop ? "justify-between" : "flex-col items-center gap-8"
+            }`}
+          >
             <Image
               src={"https://plomienmilowice.pl/about-hala-1.webp"}
               alt="hala sportowa"
@@ -112,7 +134,9 @@ export default function About() {
             />
           </div>
         </article>
-        <article className={`${isDesktop ? "w-[55rem]" : ""}`}>
+        <article
+          className={`${isDesktop ? "w-[55rem]" : "w-[90%] text-center"}`}
+        >
           <h1 className={"py-10 text-2xl font-semibold"}>Regionalizm</h1>
           <p className={"mb-5"}>
             Sosnowiec to nie tylko nasza lokalizacja, to serce naszej akademii,
@@ -128,7 +152,7 @@ export default function About() {
             alt="hala sportowa"
             height={270}
             width={880}
-            className="h-[270px] rounded-2xl"
+            className="rounded-2xl"
           />
         </article>
       </section>

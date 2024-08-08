@@ -1,6 +1,5 @@
 "use client";
 
-import { ReactNode } from "react";
 import Image from "next/image";
 
 import { useMediaQuery } from "@/hooks/useMediaQuery";
@@ -17,15 +16,25 @@ const CoachCard: React.FC<CoachCardProps> = ({ image, name, text, isEven }) => {
 
   return (
     <article
-      className={`flex items-center relative ${isDesktop ? "w-[55rem]" : ""}`}
+      className={`flex items-center relative ${
+        isDesktop ? "w-[55rem]" : "w-[90%]"
+      }`}
     >
       <div
-        className={`flex ${
-          isEven ? "flex-row-reverse pr-8" : "pl-8"
-        } jsutify-between py-8 z-10 bg-white bg-opacity-30 backdrop-blur-xl rounded-2xl border border-gray-200 border-opacity-40 shadow-lg`}
+        className={`flex justify-between py-8 z-10 bg-white bg-opacity-30 backdrop-blur-xl rounded-2xl border border-gray-200 border-opacity-40 shadow-lg ${
+          isDesktop
+            ? [isEven ? "flex-row-reverse pr-8" : "pl-8"]
+            : "flex-col-reverse gap-8"
+        }`}
       >
-        <h1 className="w-3/5 text-justify">{text}</h1>
-        <div className={"w-2/5 flex relative justify-center"}>
+        <h1
+          className={`${isDesktop ? "w-3/5 text-justify" : "px-8 text-center"}`}
+        >
+          {text}
+        </h1>
+        <div
+          className={`flex relative justify-center ${isDesktop ? "w-2/5" : ""}`}
+        >
           <Image
             src={image}
             alt={name}
@@ -42,22 +51,30 @@ const CoachCard: React.FC<CoachCardProps> = ({ image, name, text, isEven }) => {
           </h1>
         </div>
       </div>
-      <div
-        className={`h-[70%] aspect-square absolute rounded-full bg-custom-gold ${
-          isEven ? "-right-[9rem]" : "-left-[9rem]"
-        }`}
-      ></div>
+      {isDesktop ? (
+        <div
+          className={`h-[70%] aspect-square absolute rounded-full bg-custom-gold ${
+            isEven ? "-right-[9rem]" : "-left-[9rem]"
+          }`}
+        ></div>
+      ) : null}
     </article>
   );
 };
 
 export default function CoachesInfo() {
+  const isDesktop = useMediaQuery("(min-width: 1000px)");
+
   return (
     <main>
       <section
         className={"pt-36 pb-28 flex flex-col gap-10 items-center bg-white"}
       >
-        <h1 className={"w-[55rem] pt-10 text-2xl font-semibold"}>
+        <h1
+          className={`w-[55rem] pt-10 text-2xl font-semibold ${
+            isDesktop ? "" : "text-center"
+          }`}
+        >
           Nasi trenerzy
         </h1>
         <CoachCard
@@ -69,19 +86,19 @@ export default function CoachesInfo() {
         <CoachCard
           image="https://plomienmilowice.pl/agnieszka-legien.jpg"
           name="Agnieszka Legień"
-          text="Trenerka Agnieszka Legień ukończyła Akademię Wychowania Fizycznego w Katowicach z przygotowaniem pedagogicznym. Jest wychowanką Płomienia Milowice, gdzie w drużynach młodzieżowych zdobywała medale Mistrzostw Polski. Od lat z pasją szkoli młodzież w mini siatkówce, osiągając liczne sukcesy. Jej podejście do dzieci charakteryzuje się zaangażowaniem i troską, tworząc inspirujące środowisko dla młodych sportowców. Dzięki swojemu poświęceniu i profesjonalizmowi, trenerka Agnieszka skutecznie motywuje młodych zawodników do osiągania pełnego potencjału."
+          text="Trenerka Agnieszka Legień ukończyła studia na kierunku wychowanie fizyczne na AWK w Katowicach, zdobywając wiedzę teoretyczną, praktyczną i przygotowanie pedagogiczne. Posiada licencjat z piłki siatkowej i dyplom trenera piłki siatkowej kl II. Jest wychowanką Płomienia Milowice, gdzie w drużynach młodzieżowych zdobywała liczne sukcesy. Od lat z pasją szkoli młodzież w mini siatkówce, łącząc naukę i zabawę. Jej podejście do dzieci charakteryzuje się zaangażowaniem i troską, co sprawia, że potrafi tworzyć atmosferę wsparcia i motywacji dla młodych adeptów siatkówki."
           isEven={true}
         />
         <CoachCard
           image="https://plomienmilowice.pl/paulina-baltrukiewicz.png"
           name="Paulina Bałtrukiewicz"
-          text="Trenerka Paulina Bałtrukiewicz w naszej akademii specjalizuje się w poprawie koordynacji i motoryki zawodników. Ukończyła Akademię Wychowania Fizycznego w Katowicach, zdobywając specjalizacje z wychowania fizycznego i gimnastyki korekcyjnej. Od wielu lat pracuje jako trenerka przygotowania motorycznego Zdobyła doświadczenie jako II trenerka piłki siatkowej Kadry Śląska Młodziczek rocznika 2009 oraz jako obecna trenerka przygotowania motorycznego Kadry Polski U15 Młodziczek. Jej nowoczesne metody treningowe pomagają zawodnikom poprawić ich koordynację i kondycję. Trenerka Paulina znana jest z indywidualnego podejścia do każdego podopiecznego, co pozwala na dostosowanie treningów do ich potrzeb i możliwości."
+          text="Trenerka Paulina Bałtrukiewicz w naszej akademii specjalizuje się nauką techniki ćwiczeń fizycznych i poprawą zdolności motorycznych zawodników. Ukończyła Akademię Wychowania Fizycznego w Katowicach, na kierunku Wychowanie Fizyczne ze  specjalizacją z gimnastyki korekcyjnej, treningu personalnego i funkcjonalnego. Pracuje jako trenerka przygotowania motorycznego z kadrą Polski U-16 oraz z kadrą województwa śląskiego. Na co dzień jest trenerką piłki siatkowej w Klubie Uczelnianym AZS UE Katowice oraz nauczycielką wychowania fizycznego. Jej nowoczesne metody treningowe pomagają zawodnikom poprawić ich wzorce ruchowe, co wpływa na wzrost zdolności koordynacyjnych i kondycyjnych."
           isEven={false}
         />
         <CoachCard
           image="https://plomienmilowice.pl/nadia-peszko.jpg"
           name="Nadia Peszko"
-          text="Trenerka Nadia Peszko jest absolwentką psychologii na Uniwersytecie SWPS ze specjalizacją psychologii sportu i aktywności fizycznej oraz studiów podyplomowych z psychologii sportu na Poznańskim AWF. Posiada bogate doświadczenie w pracy indywidualnej, jako członek sztabów szkoleniowych i dydaktyk na uczelniach wyższych. Współpracuje ze sportowcami na różnym etapie kariery i poziomie zaawansowania. W przeszłości była reprezentantką klubów Polskiej Ligi Siatkówki, młodzieżową reprezentantką Polski i medalistką Mistrzostw Polski. W Akademii Siatkówki Płomień Milowice trenerka Nadia pracuje zarówno z zawodnikami, jak i ich rodzicami, wspierając rozwój mentalny młodych sportowców."
+          text="Trenerka Nadia Peszko jest absolwentką psychologii na Uniwersytecie SWPS ze specjalizacją psychologii sportu i aktywności fizycznej oraz studiów podyplomowych z psychologii sportu na Poznańskim AWF. Posiada bogate doświadczenie w pracy indywidualnej jako członek sztabów szkoleniowych i dydaktyk na uczelniach wyższych. Współpracuje ze sportowcami na różnym etapie kariery i poziomie zaawansowania. W przeszłości była reprezentantką klubów Polskiej Ligi Siatkówki, młodzieżową reprezentantką Polski i medalistką Mistrzostw Polski. W Akademii Siatkówki Płomień Milowice trenerka Nadia pracuje zarówno z zawodnikami, jak i ich rodzicami, wspierając rozwój umiejętności psychologicznych niezbędnych w sporcie."
           isEven={true}
         />
         <CoachCard
