@@ -87,7 +87,7 @@ export default function CoachesInfo() {
         <CoachCard
           image="https://plomienmilowice.pl/agnieszka-legien.jpg"
           name="Agnieszka Legień"
-          text="Trenerka Agnieszka Legień ukończyła studia na kierunku wychowanie fizyczne na AWK w Katowicach, zdobywając wiedzę teoretyczną, praktyczną i przygotowanie pedagogiczne. Posiada licencjat z piłki siatkowej i dyplom trenera piłki siatkowej kl II. Jest wychowanką Płomienia Milowice, gdzie w drużynach młodzieżowych zdobywała liczne sukcesy. Od lat z pasją szkoli młodzież w mini siatkówce, łącząc naukę i zabawę. Jej podejście do dzieci charakteryzuje się zaangażowaniem i troską, co sprawia, że potrafi tworzyć atmosferę wsparcia i motywacji dla młodych adeptów siatkówki."
+          text="Trenerka Agnieszka Legień ukończyła studia na kierunku wychowanie fizyczne na AWF w Katowicach, zdobywając wiedzę teoretyczną, praktyczną i przygotowanie pedagogiczne. Posiada licencjat z piłki siatkowej i dyplom trenera piłki siatkowej kl II. Jest wychowanką Płomienia Milowice, gdzie w drużynach młodzieżowych zdobywała liczne sukcesy. Od lat z pasją szkoli młodzież w mini siatkówce, łącząc naukę i zabawę. Jej podejście do dzieci charakteryzuje się zaangażowaniem i troską, co sprawia, że potrafi tworzyć atmosferę wsparcia i motywacji dla młodych adeptów siatkówki."
           isEven={true}
         />
         <CoachCard
