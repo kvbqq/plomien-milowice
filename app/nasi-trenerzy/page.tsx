@@ -71,8 +71,8 @@ export default function CoachesInfo() {
         className={"pt-36 pb-28 flex flex-col gap-10 items-center bg-white"}
       >
         <h1
-          className={`w-[55rem] pt-10 text-2xl font-semibold ${
-            isDesktop ? "" : "text-center"
+          className={`pt-10 text-2xl font-semibold ${
+            isDesktop ? "w-[55rem]" : "text-center"
           }`}
         >
           Nasi trenerzy
