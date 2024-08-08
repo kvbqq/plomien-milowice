@@ -74,18 +74,18 @@ const AboutOwner = () => {
               isDesktop ? "w-[30rem]" : "w-[90%]"
             }`}
           >
-            <span className={"font-semibold"}>Agata Kopczyk</span> to{" "}
+            <span className={"font-semibold"}>Agata Kopczyk</span> to
             <span className={"text-custom-gold"}>serce i dusza akademii</span>,
-            wychowanka Płomienia Milowice, wielokrotna{" "}
+            wychowanka Płomienia Milowice, była
             <span className={"text-custom-gold"}>
               reprezentankta Polski i medalistka mistrzostw Polski
             </span>
-            . Wielokrotnie doprowadziła drużyny młodzieżowe do{" "}
+            . Wielokrotnie doprowadziła drużyny młodzieżowe do
             <span className={"text-custom-gold"}>
               triumfów na Mistrzostwach Polski
             </span>
-            . Jej podejście, oparte na indywidualnym podejściu do zawodnika,
-            pozwala zawodnikom osiągać pełny potencjał w sporcie i życiu
+            . Jej indywidualne podejście do każdego z zawodników pozwala
+            osiągnąć im pełny potencjał zarówno w sporcie, jak i w życiu
             codziennym.
           </p>
           <Button text="Poznaj naszych trenerów" href="nasi-trenerzy" />
