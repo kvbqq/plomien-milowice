@@ -1,7 +1,17 @@
+"use client";
+
+import { useMediaQuery } from "@/hooks/useMediaQuery";
+
 export default function PrivacyPolicy() {
+  const isDesktop = useMediaQuery("(min-width: 1000px)");
+
   return (
     <main className={"pt-44 pb-28 flex flex-col items-center bg-white"}>
-      <section className="w-[60rem] flex flex-col gap-5 text-lg">
+      <section
+        className={`${
+          isDesktop ? "w-[60rem]" : "w-[90%]"
+        }  flex flex-col gap-5 text-lg`}
+      >
         <h1 className="font-semibold">Polityka prywatności</h1>
         <p className="text-justify">
           W związku z wejściem w życie w dniu 25 maja 2018 r. rozporządzenia

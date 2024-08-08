@@ -1,7 +1,17 @@
+"use client";
+
+import { useMediaQuery } from "@/hooks/useMediaQuery";
+
 export default function Regulations() {
+  const isDesktop = useMediaQuery("(min-width: 1000px)");
+
   return (
     <main className={"pt-44 pb-28 flex flex-col items-center bg-white"}>
-      <section className="w-[60rem] flex flex-col gap-5 text-lg">
+      <section
+        className={`${
+          isDesktop ? "w-[60rem]" : "w-[90%]"
+        }  flex flex-col gap-5 text-lg`}
+      >
         <h1 className="mb-10 font-semibold text-center text-xl">
           Regulamin <br /> członkostwa w stowarzyszeniu Projekt Zagłębie
           Akademia Siatkówki Płomień Milowice
