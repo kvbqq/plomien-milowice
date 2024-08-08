@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
 import { Nav } from "./navbar/Nav";
 import { ContactFooter } from "./contactFooter/ContactFooter";
@@ -28,6 +29,7 @@ export default function RootLayout({
         <Nav />
         {children}
         <ContactFooter />
+        <Analytics />
       </body>
     </html>
   );
