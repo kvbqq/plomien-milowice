@@ -11,6 +11,11 @@ import { HiOutlineX } from "react-icons/hi";
 import Logo from "@/public/logo.webp";
 import { Button } from "@/components/button/Button";
 
+interface NavMenuMobileProps {
+  showNav: boolean;
+  toggleNav: () => void;
+}
+
 const NavLogo = () => {
   return (
     <Link href="/">
@@ -39,19 +44,31 @@ const NavMenu = () => {
   );
 };
 
-const NavMenuMobile = () => {
+const NavMenuMobile: React.FC<NavMenuMobileProps> = ({
+  showNav,
+  toggleNav,
+}) => {
   return (
-    <div className={"w-full pb-10 flex-col text-center"}>
+    <div className={"w-full pb-16 flex-col text-center"}>
       <ul className={"pb-10"}>
         {navLinks.map((item, i) => (
           <li key={i} className={"py-3"}>
-            <Link href={item.href} className={"hover:text-font-white-hover"}>
+            <Link
+              href={item.href}
+              className={"hover:text-font-white-hover"}
+              onClick={toggleNav}
+            >
               {item.label}
             </Link>
           </li>
         ))}
       </ul>
-      <Button text="Dołącz do nas" href="zapisy" style="min-w-48" />
+      <Button
+        text="Dołącz do nas"
+        href="zapisy"
+        style="min-w-48"
+        onclick={toggleNav}
+      />
     </div>
   );
 };
@@ -88,7 +105,9 @@ export const Nav = () => {
           </button>
         )}
       </div>
-      {showNav && !isDesktop ? <NavMenuMobile /> : null}
+      {showNav && !isDesktop ? (
+        <NavMenuMobile showNav={showNav} toggleNav={toggle} />
+      ) : null}
     </nav>
   );
 };
