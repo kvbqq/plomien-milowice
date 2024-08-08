@@ -6,7 +6,7 @@ import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 import { Button } from "@/components/button/Button";
 import { GoArrowRight } from "react-icons/go";
-import Logo from "@/public/offer-logo.png";
+import Logo from "@/public/plomien-milowice-logo.webp";
 
 const GroupCard = ({
   title,
@@ -51,7 +51,7 @@ const GroupLogo = () => {
   return (
     <div className={"w-[15rem] h-[10rem] flex items-center bg-white"}>
       <Image
-        src={"https://plomienmilowice.pl/plomien-milowice-logo.png"}
+        src={Logo}
         alt={"Płomień Milowice"}
         width={110}
         height={110}

@@ -28,6 +28,10 @@ const PillarCard: React.FC<PillarCardProps> = ({ icon, title, text }) => {
 export default function About() {
   const isDesktop = useMediaQuery("(min-width: 1000px)");
 
+  function preventWidows(text: string) {
+    return text.replace(/ (\w{1}) /g, "&nbsp;$1 ");
+  }
+
   return (
     <main className="overflow-hidden">
       <section className={"pb-28 flex flex-col gap-24 items-center bg-white"}>
@@ -44,7 +48,11 @@ export default function About() {
               isDesktop ? "" : "flex-col items-center gap-8"
             }`}
           >
-            <p className={`${isDesktop ? "pr-24" : "text-center"}`}>
+            <p
+              className={`whitespace-normal ${
+                isDesktop ? "pr-24 text-justify" : "text-center"
+              }`}
+            >
               <span className="text-custom-gold">Płomień Milowice</span> to
               akademia, w której każdy zawodnik znajdzie wsparcie i inspirację
               do rozwijania swoich pasji i umiejętności. Nasza Akademia jest
