@@ -75,13 +75,15 @@ const AboutOwner = () => {
             }`}
           >
             <span className={"font-semibold"}>Agata Kopczyk</span> to
-            <span className={"text-custom-gold"}>serce i dusza akademii</span>,
+            <span className={"text-custom-gold"}> serce i dusza akademii</span>,
             wychowanka Płomienia Milowice, była
             <span className={"text-custom-gold"}>
+              {" "}
               reprezentankta Polski i medalistka mistrzostw Polski
             </span>
             . Wielokrotnie doprowadziła drużyny młodzieżowe do
             <span className={"text-custom-gold"}>
+              {" "}
               triumfów na Mistrzostwach Polski
             </span>
             . Jej indywidualne podejście do każdego z zawodników pozwala

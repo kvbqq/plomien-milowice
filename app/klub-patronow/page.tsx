@@ -46,8 +46,8 @@ export default function PatronClub() {
             Rozpalmy razem płomień sukcesu! Dziękujemy za Twoje wsparcie.
           </p>
           <p
-            className={`px-14 py-6 bg-custom-gold rounded-xl ${
-              isDesktop ? "" : "flex flex-col items-center"
+            className={`py-6 bg-custom-gold rounded-xl ${
+              isDesktop ? "px-14" : "w-full flex flex-col items-center"
             }`}
           >
             Numer konta do wpłat:{" "}
