@@ -79,8 +79,8 @@ export const Offer = () => {
               : "flex flex-col items-center space-y-5"
           }`}
         >
-          <GroupCard title="Skrzat" yearsList={["2016", "2017", "2018"]} />
-          <GroupCard title="Płomyk" yearsList={["2014", "2015"]} />
+          <GroupCard title="Iskry" yearsList={["2016", "2017", "2018"]} />
+          <GroupCard title="Płomyki" yearsList={["2014", "2015"]} />
           <GroupCard title="Kinder" yearsList={["2012", "2013"]} />
           <GroupCard title="Młodzik" yearsList={["2010", "2011"]} />
           {isDesktop ? <GroupLogo /> : null}
@@ -100,7 +100,7 @@ export const Offer = () => {
               <span className={"text-custom-gold"}>160 zł</span>
             </p>
           </div>
-          <Button text="Dołącz do akademii" href="" />
+          <Button text="Dołącz do akademii" href="zapisy" />
         </div>
       </div>
     </section>
