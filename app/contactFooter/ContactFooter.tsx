@@ -62,7 +62,7 @@ export const ContactFooter = () => {
               <Link href={"https://www.facebook.com/akademiaplomienmilowice"}>
                 <FaFacebookSquare size={28} color="#C69A0D" />
               </Link>
-              <Link href={""}>
+              <Link href={"https://www.instagram.com/plomien.milowice"}>
                 <FaInstagram size={28} color="#C69A0D" />
               </Link>
             </div>

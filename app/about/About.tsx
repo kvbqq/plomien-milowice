@@ -86,9 +86,9 @@ const AboutOwner = () => {
               {" "}
               triumfów na Mistrzostwach Polski
             </span>
-            . Jej indywidualne podejście do każdego z zawodników pozwala
-            osiągnąć im pełny potencjał zarówno w sporcie, jak i w życiu
-            codziennym.
+            . Jej indywidualne podejście do każdego
+            <br />z zawodników pozwala osiągnąć im pełny potencjał zarówno w
+            sporcie, jak i w życiu codziennym.
           </p>
           <Button text="Poznaj naszych trenerów" href="nasi-trenerzy" />
         </div>

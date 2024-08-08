@@ -3,11 +3,12 @@
 import Image from "next/image";
 
 import { useMediaQuery } from "@/hooks/useMediaQuery";
+import React, { ReactNode } from "react";
 
 interface CoachCardProps {
   image: string;
   name: string;
-  text: string;
+  text: ReactNode;
   isEven: boolean;
 }
 
