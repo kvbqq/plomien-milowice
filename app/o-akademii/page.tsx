@@ -47,15 +47,14 @@ export default function About() {
             <p className={`${isDesktop ? "pr-24" : "text-center"}`}>
               <span className="text-custom-gold">Płomień Milowice</span> to
               akademia, w której każdy zawodnik znajdzie wsparcie i inspirację
-              do rozwijania swoich pasji i umiejętności. Nasza Akademia ma być
+              do rozwijania swoich pasji i umiejętności. Nasza Akademia jest
               miejscem, gdzie lokalny talent jest doceniany i rozwijany, a
               uczestnicy mają możliwość nie tylko doskonalenia swoich
-              umiejętności sportowych, ale także budowania pozytywnych relacji,
-              zdobywania wartościowych doświadczeń oraz rozwijania się jako
-              osoby. Naszym priorytetem jest budowanie silnej społeczności
-              opartej na współpracy, szacunku oraz wspieranie rozwoju osobistego
-              każdego uczestnika, niezależnie od poziomu zaawansowania
-              sportowego.
+              umiejętności sportowych, ale także budowania pozytywnych relacji i
+              zdobywania wartościowych doświadczeń. Naszym priorytetem jest
+              budowanie silnej społeczności opartej na współpracy i szacunku, a
+              także wspieranie rozwoju osobistego każdego uczestnika,
+              niezależnie od poziomu zaawansowania sportowego.
             </p>
 
             <Image
