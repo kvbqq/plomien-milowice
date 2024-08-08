@@ -49,8 +49,14 @@ const GroupCard = ({
 
 const GroupLogo = () => {
   return (
-    <div className={"w-[15rem] h-[10rem] bg-white"}>
-      <Image src={Logo} alt={"Płomień Milowice"} className={"m-auto"} />
+    <div className={"w-[15rem] h-[10rem] flex items-center bg-white"}>
+      <Image
+        src={"https://plomienmilowice.pl/plomien-milowice-logo.png"}
+        alt={"Płomień Milowice"}
+        width={110}
+        height={110}
+        className={"m-auto"}
+      />
     </div>
   );
 };
