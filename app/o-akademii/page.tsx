@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 import Image from "next/image";
 
 import { useMediaQuery } from "@/hooks/useMediaQuery";
+import Logo from "@/public/plomien-milowice-logo.webp";
 
 import { MdOutlineSportsVolleyball } from "react-icons/md";
 import { IoMusicalNotesOutline } from "react-icons/io5";
@@ -66,7 +67,7 @@ export default function About() {
             </p>
 
             <Image
-              src={"https://plomienmilowice.pl/plomien-milowice-logo.png"}
+              src={Logo}
               alt={"Płomień Milowice Logo"}
               width={213}
               height={213}
