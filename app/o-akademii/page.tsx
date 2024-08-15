@@ -5,6 +5,9 @@ import Image from "next/image";
 
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import Logo from "@/public/plomien-milowice-logo.webp";
+import AboutHala1 from "@/public/about-hala-1.webp";
+import AboutHala2 from "@/public/about-hala-2.webp";
+import AboutMilowice from "@/public/about-milowice.webp";
 
 import { MdOutlineSportsVolleyball } from "react-icons/md";
 import { IoMusicalNotesOutline } from "react-icons/io5";
@@ -127,14 +130,14 @@ export default function About() {
             }`}
           >
             <Image
-              src={"https://plomienmilowice.pl/about-hala-1.webp"}
+              src={AboutHala1}
               alt="hala sportowa"
               width={432}
               height={250}
               className="rounded-2xl"
             />
             <Image
-              src={"https://plomienmilowice.pl/about-hala-2.webp"}
+              src={AboutHala2}
               alt="hala sportowa"
               width={432}
               height={250}
@@ -156,7 +159,7 @@ export default function About() {
             jako ludzie.
           </p>
           <Image
-            src={"https://plomienmilowice.pl/about-milowice.webp"}
+            src={AboutMilowice}
             alt="hala sportowa"
             height={270}
             width={880}

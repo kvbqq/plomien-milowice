@@ -1,12 +1,18 @@
 "use client";
 
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import React, { ReactNode } from "react";
 
+import AgataK from "@/public/agata-kopczyk.jpg";
+import AgnieszkaL from "@/public/agnieszka-legien.jpg";
+import PaulinaB from "@/public/paulina-baltrukiewicz.png";
+import NadiaP from "@/public/nadia-peszko.jpg";
+import AngelikaD from "@/public/angelika.png";
+
 interface CoachCardProps {
-  image: string;
+  image: StaticImageData;
   name: string;
   text: ReactNode;
   isEven: boolean;
@@ -79,31 +85,31 @@ export default function CoachesInfo() {
           Nasi trenerzy
         </h1>
         <CoachCard
-          image="https://plomienmilowice.pl/agata-kopczyk.jpg"
+          image={AgataK}
           name="Agata Kopczyk"
           text="Założycielka Akademii Siatkówki Płomień Milowice. Jako była siatkarka, wielokrotnie zdobywała Mistrzostwo Polski. Razem z Płomieniem Milowice zdobyła Wicemistrzostwo oraz brązowy medal Mistrzostw Polski. Wielokrotna reprezentantka Polski. Po zakończeniu kariery sportowej poświęciła się trenowaniu młodzieży. Razem ze swoimi drużynami wielokrotnie osiągała liczne sukcesy na wielu turniejach ogólnopolskich, w tym Mistrzostwach Polski. Jej podopieczne regularnie występują w Tauron Lidze i reprezentują kraj na arenie międzynarodowej. Trenerka Agata z pasją i profesjonalizmem rozwija umiejętności sportowe młodzieży, budując ich charakter i promując zasady fair play. Tworzy otwartą, wspierającą atmosferę, stale doskonaląc swoje metody treningowe."
           isEven={false}
         />
         <CoachCard
-          image="https://plomienmilowice.pl/agnieszka-legien.jpg"
+          image={AgnieszkaL}
           name="Agnieszka Legień"
           text="Trenerka Agnieszka Legień ukończyła studia na kierunku wychowanie fizyczne na AWF w Katowicach, zdobywając wiedzę teoretyczną, praktyczną i przygotowanie pedagogiczne. Posiada licencjat z piłki siatkowej i dyplom trenera piłki siatkowej kl II. Jest wychowanką Płomienia Milowice, gdzie w drużynach młodzieżowych zdobywała liczne sukcesy. Od lat z pasją szkoli młodzież w mini siatkówce, łącząc naukę i zabawę. Jej podejście do dzieci charakteryzuje się zaangażowaniem i troską, co sprawia, że potrafi tworzyć atmosferę wsparcia i motywacji dla młodych adeptów siatkówki."
           isEven={true}
         />
         <CoachCard
-          image="https://plomienmilowice.pl/paulina-baltrukiewicz.png"
+          image={PaulinaB}
           name="Paulina Bałtrukiewicz"
           text="Trenerka Paulina Bałtrukiewicz w naszej akademii specjalizuje się nauką techniki ćwiczeń fizycznych i poprawą zdolności motorycznych zawodników. Ukończyła Akademię Wychowania Fizycznego w Katowicach, na kierunku Wychowanie Fizyczne ze  specjalizacją z gimnastyki korekcyjnej, treningu personalnego i funkcjonalnego. Pracuje jako trenerka przygotowania motorycznego z kadrą Polski U-16 oraz z kadrą województwa śląskiego. Na co dzień jest trenerką piłki siatkowej w Klubie Uczelnianym AZS UE Katowice oraz nauczycielką wychowania fizycznego. Jej nowoczesne metody treningowe pomagają zawodnikom poprawić ich wzorce ruchowe, co wpływa na wzrost zdolności koordynacyjnych i kondycyjnych."
           isEven={false}
         />
         <CoachCard
-          image="https://plomienmilowice.pl/nadia-peszko.jpg"
+          image={NadiaP}
           name="Nadia Peszko"
           text="Trenerka Nadia Peszko jest absolwentką psychologii na Uniwersytecie SWPS ze specjalizacją psychologii sportu i aktywności fizycznej oraz studiów podyplomowych z psychologii sportu na Poznańskim AWF. Posiada bogate doświadczenie w pracy indywidualnej jako członek sztabów szkoleniowych i dydaktyk na uczelniach wyższych. Współpracuje ze sportowcami na różnym etapie kariery i poziomie zaawansowania. W przeszłości była reprezentantką klubów Polskiej Ligi Siatkówki, młodzieżową reprezentantką Polski i medalistką Mistrzostw Polski. W Akademii Siatkówki Płomień Milowice trenerka Nadia pracuje zarówno z zawodnikami, jak i ich rodzicami, wspierając rozwój umiejętności psychologicznych niezbędnych w sporcie."
           isEven={true}
         />
         <CoachCard
-          image="https://plomienmilowice.pl/angelika.png"
+          image={AngelikaD}
           name="Angelika Danielik"
           text="Trenerka Angelika Danielik to młoda, ambitna trenerka, która wnosi do Akademii świeżość i nowoczesne podejście. Ukończyła studia I stopnia na AWF w Katowicach na kierunku Sport, specjalizując się w przygotowaniu motorycznym, i kontynuuje naukę na kierunku Wychowanie Fizyczne. Jej wiedza oraz umiejętności, potwierdzone certyfikatem trenera piłki siatkowej PZPS, umożliwiają jej prowadzenie treningów na wysokim poziomie. Jako była zawodniczka MUKS Dargfil Tomaszów Mazowiecki, osiągnęła liczne sukcesy w siatkówce młodzieżowej, w tym Wicemistrzostwo Polski Kadetek. Trenerka Angelika doskonale rozumie potrzeby młodych sportowców, a jej profesjonalne podejście łączy z entuzjazmem, co sprawia, że treningi z nią są nie tylko efektywne, ale także bardzo inspirujące."
           isEven={false}

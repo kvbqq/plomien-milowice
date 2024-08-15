@@ -4,6 +4,8 @@ import Image from "next/image";
 
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 
+import Logo from "@/public/plomien-milowice-logo.webp";
+
 export default function PatronClub() {
   const isDesktop = useMediaQuery("(min-width: 1000px)");
 
@@ -15,12 +17,7 @@ export default function PatronClub() {
             isDesktop ? "w-[55rem]" : "w-[90%]"
           } flex flex-col items-center gap-14`}
         >
-          <Image
-            src={"https://plomienmilowice.pl/plomien-milowice-logo.webp"}
-            alt="logo"
-            width={200}
-            height={200}
-          />
+          <Image src={Logo} alt="logo" width={200} height={200} />
           <h1
             className={`text-3xl font-semibold ${
               isDesktop ? "" : "text-center"
