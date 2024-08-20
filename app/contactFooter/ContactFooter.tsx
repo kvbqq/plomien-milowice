@@ -82,6 +82,13 @@ export const ContactFooter = () => {
             <div className={"flex flex-col space-y-2 font-thin text-sm"}>
               <Link href={"/regulamin"}>Regulamin</Link>
               <Link href={"/polityka-prywatnosci"}>Polityka prywatności</Link>
+              <Link
+                href={
+                  "../Akademia Siatkówki Płomień Milowice - Standardy Ochrony Małoletnich.pdf"
+                }
+              >
+                Standardy Ochrony Małoletnich
+              </Link>
             </div>
           </div>
         </div>
