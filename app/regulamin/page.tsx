@@ -33,6 +33,11 @@ export default function Regulations() {
             prawa oraz postanowień niniejszego regulaminu. <br />
             <br />
           </li>
+          <li>
+            Akademia jest sekcją piłki siatkowej klubu M.T.S Płomień Milowice.
+            <br />
+            <br />
+          </li>
         </ol>
         <h2 className="font-semibold">§ 2. Zasady członkostwa</h2>
         <ol className="list-decimal pl-12">
@@ -43,8 +48,19 @@ export default function Regulations() {
             <br />
           </li>
           <li>
+            Miesięczna opłata stanowi składkę członkowską związaną z
+            przynależnością do sekcji piłki siatkowej klubu M.T.S Płomień
+            Milowice. <br />
+            <br />
+          </li>
+          <li>
             Członek Akademii zobowiązany jest do przestrzegania niniejszego
             regulaminu oraz regulaminów poszczególnych zajęć. <br />
+            <br />
+          </li>
+          <li>
+            Akceptacja regulaminu jest jednoznaczna z potwierdzeniem członkostwa
+            w Akademii. <br />
             <br />
           </li>
         </ol>
