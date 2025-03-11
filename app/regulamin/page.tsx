@@ -121,6 +121,20 @@ export default function Regulations() {
             <br />
           </li>
           <li>
+            Do każdej transakcji może być doliczona prowizja operatora
+            płatności, której wysokość zależy od wybranej metody płatności. Jest
+            to standardowa opłata pobierana przez dostawcę usługi płatniczej.{" "}
+            <br />
+            <br />
+          </li>
+          <li>
+            Akademia nie akceptuje tradycyjnych przelewów bankowych. W celu
+            automatyzacji procesów księgowych, eliminacji błędów oraz sprawnego
+            przypisywania wpłat do uczestników, wszystkie płatności realizowane
+            są za pośrednictwem systemu Przelewy24. <br />
+            <br />
+          </li>
+          <li>
             Brak opłaty członkowskiej w terminie upoważnia Akademię do
             niedopuszczenia Klubowicza do zajęć, aż do czasu jej uregulowania.{" "}
             <br />
