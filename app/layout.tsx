@@ -6,7 +6,7 @@ import { Nav } from "./navbar/Nav";
 import { ContactFooter } from "./contactFooter/ContactFooter";
 import "./globals.css";
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "Płomień Milowice",

@@ -4,6 +4,9 @@ import Image from "next/image";
 
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 
+import { Slider } from "@/components/slider/Slider";
+import { secondSliderElements } from "@/constants/constants";
+
 import { Button } from "@/components/button/Button";
 import { GoArrowRight } from "react-icons/go";
 import Logo from "@/public/plomien-milowice-logo.webp";
@@ -65,50 +68,79 @@ export const Offer = () => {
   const isDesktop = useMediaQuery("(min-width: 1000px)");
 
   return (
-    <section
-      className={`flex justify-center bg-white ${
-        isDesktop ? "bg-center bg-no-repeat bg-offer-bg" : null
-      }`}
-    >
-      <div className={`${isDesktop ? "w-[55rem] p-12" : "w-full py-12"}`}>
-        <h1
-          className={`mt-3 mb-11 text-2xl font-semibold ${
-            isDesktop ? null : "text-center"
-          }`}
-        >
-          Grupy <span className={"text-custom-gold"}>treningowe</span>
-        </h1>
-        <div
-          className={` ${
-            isDesktop
-              ? "grid grid-cols-3 grid-rows-2 gap-6 justify-items-center"
-              : "flex flex-col items-center space-y-5"
-          }`}
-        >
-          <GroupCard title="Iskry" yearsList={["2016", "2017", "2018"]} />
-          <GroupCard title="Płomyki" yearsList={["2014", "2015"]} />
-          <GroupCard title="Kinder" yearsList={["2012", "2013"]} />
-          <GroupCard title="Młodzik" yearsList={["2010", "2011"]} />
-          {isDesktop ? <GroupLogo /> : null}
-          <GroupCard title="Talent" yearsList={["2007", "2008", "2009"]} />
-        </div>
-        <div className={"mt-6 mb-3 flex flex-col items-center space-y-7"}>
-          <div
-            className={`h-[10rem] flex flex-col items-center justify-center space-y-4 rounded-3xl text-center text-2xl font-medium bg-white border border-gray-100 shadow-lg ${
-              isDesktop ? "w-[33rem]" : "w-[90%] max-w-[33rem]"
+    <section className={`pb-20 relative`}>
+      <article
+        className={`flex justify-center bg-white ${
+          isDesktop ? "bg-center bg-no-repeat bg-offer-bg" : null
+        }`}
+      >
+        <div className={`${isDesktop ? "w-[55rem] p-12" : "w-full py-12"}`}>
+          <h1
+            className={`mt-3 mb-11 text-2xl font-semibold ${
+              isDesktop ? null : "text-center"
             }`}
           >
-            <h1>
-              <span className={"text-custom-gold"}>8 treningów</span> w miesiącu
-            </h1>
-            <p className={"flex items-center space-x-5"}>
-              <span className={"line-through"}>240 zł</span> <GoArrowRight />
-              <span className={"text-custom-gold"}>160 zł</span>
-            </p>
+            Grupy <span className={"text-custom-gold"}>treningowe</span>
+          </h1>
+          <div
+            className={` ${
+              isDesktop
+                ? "grid grid-cols-3 grid-rows-2 gap-6 justify-items-center"
+                : "flex flex-col items-center space-y-5"
+            }`}
+          >
+            <GroupCard title="Iskry" yearsList={["2017", "2018", "2019"]} />
+            <GroupCard title="Płomyki" yearsList={["2015", "2016"]} />
+            <GroupCard title="Kinder" yearsList={["2013", "2014"]} />
+            <GroupCard title="Młodzik" yearsList={["2011", "2012"]} />
+            {isDesktop ? <GroupLogo /> : null}
+            <GroupCard title="Talent" yearsList={["2008", "2009", "2010"]} />
           </div>
-          <Button text="Dołącz do akademii" href="zapisy" />
+          <div className={"mt-6 mb-3 flex flex-col items-center space-y-7"}>
+            <div
+              className={`flex flex-col items-center justify-center space-y-5 rounded-3xl text-center text-2xl font-semibold bg-white border border-gray-100 shadow-lg ${
+                isDesktop
+                  ? "h-[10rem] w-[33rem]"
+                  : "h-[16rem] w-[90%] max-w-[33rem]"
+              }`}
+            >
+              <h1>
+                <span className={"text-custom-gold"}>8 treningów</span> w
+                miesiącu
+              </h1>
+              <div
+                className={`w-full flex text-xl font-medium ${
+                  isDesktop
+                    ? "flex-row justify-center gap-16"
+                    : "flex-col items-center gap-5"
+                }`}
+              >
+                <div>
+                  <h2 className={"mb-1 text-custom-gold"}>Sosnowiec</h2>
+                  <p className={"flex items-center space-x-2"}>
+                    <span className={"line-through"}>280 zł</span>{" "}
+                    <GoArrowRight />
+                    <span className={"text-custom-gold"}>200 zł</span>
+                  </p>
+                </div>
+                <div>
+                  <h2 className={"mb-1 text-custom-gold"}>Piekary Śląskie</h2>
+                  <p className={"flex items-center space-x-2"}>
+                    <span className={"line-through"}>240 zł</span>{" "}
+                    <GoArrowRight />
+                    <span className={"text-custom-gold"}>160 zł</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <Button text="Dołącz do akademii" href="zapisy" />
+          </div>
         </div>
-      </div>
+      </article>
+      <Slider
+        elements={secondSliderElements}
+        style="bg-nav-bg-start text-white"
+      />
     </section>
   );
 };
