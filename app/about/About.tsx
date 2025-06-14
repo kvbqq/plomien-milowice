@@ -3,8 +3,6 @@
 import Image from "next/image";
 
 import { Button } from "@/components/button/Button";
-import { Slider } from "@/components/slider/Slider";
-import { secondSliderElements } from "@/constants/constants";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 const AboutCard = () => {
@@ -32,8 +30,8 @@ const AboutCard = () => {
       </h2>
       <p className={`mb-10 ${isDesktop ? "w-[26rem]" : "text-center"}`}>
         Kształcimy młodych sportowców, promując zdrowy styl życia i wartości
-        społeczne w Milowicach. Tworzymy inspirujące środowisko, gdzie pasja,
-        dyscyplina i współpraca prowadzą do sukcesów.
+        społeczne. Tworzymy inspirujące środowisko, gdzie pasja, dyscyplina i
+        współpraca prowadzą do sukcesów.
       </p>
       <Button text="Poznaj nas" href="o-akademii" />
     </article>
@@ -101,15 +99,11 @@ export const About = () => {
   return (
     <section
       className={
-        "pt-16 pb-32 flex flex-col relative items-center space-y-20 bg-white"
+        "pt-16 pb-16 flex flex-col relative items-center space-y-20 bg-white"
       }
     >
       <AboutCard />
       <AboutOwner />
-      <Slider
-        elements={secondSliderElements}
-        style="bg-nav-bg-start text-white"
-      />
     </section>
   );
 };
