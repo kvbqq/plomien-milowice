@@ -1,14 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 
 import { Slider } from "@/components/slider/Slider";
 import { firstSliderElements } from "@/constants/constants";
-import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { Button } from "@/components/button/Button";
 
 const landingImages = [
@@ -24,7 +25,7 @@ export const Landing = () => {
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const [sliderRef] = useKeenSlider<HTMLDivElement>({
+  const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
     loop: true,
     slides: { perView: 1 },
     slideChanged(slider) {
@@ -41,6 +42,15 @@ export const Landing = () => {
       }, 8000);
     },
   });
+
+  useEffect(() => {
+    if (slider) {
+      const timeout = setTimeout(() => {
+        slider.current?.update();
+      }, 200); // krótka przerwa po renderze
+      return () => clearTimeout(timeout);
+    }
+  }, [slider, isDesktop]);
 
   return (
     <section
@@ -87,14 +97,16 @@ export const Landing = () => {
             className="keen-slider h-full w-full relative rounded-2xl overflow-hidden"
           >
             {landingImages.map((img, idx) => (
-              <div key={idx} className="keen-slider__slide relative">
+              <div
+                key={idx}
+                className="keen-slider__slide relative w-full h-full transform-gpu"
+              >
                 <Image
                   src={img.src}
                   alt={img.alt}
                   fill
                   quality={100}
-                  className="object-cover"
-                  priority={idx === 0}
+                  objectFit="cover"
                 />
               </div>
             ))}
