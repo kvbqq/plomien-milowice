@@ -127,13 +127,13 @@ const LocationCards = () => {
             image={Hala4}
             title={"Miejska Szkoła Podstawowa nr 5"}
             address={"ul. Chopina 11"}
-            groups={["Iskry", "Płomyki", "Kinder", "Młodzik", "Talent"]}
+            groups={["Iskry", "Płomyki", "Kinder", "Młodzik"]}
           />
           <LocationCard
             image={Hala5}
             title={"Miejska Szkoła Podstawowa nr 12"}
             address={"ul. Związkowa 14"}
-            groups={["Iskry", "Płomyki", "Kinder", "Młodzik", "Talent"]}
+            groups={["Płomyki", "Kinder", "Młodzik"]}
           />
         </div>
       </div>
