@@ -5,10 +5,14 @@ import Image, { StaticImageData } from "next/image";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 import Hala1 from "@/public/about-hala-2.webp";
-import Hala2 from "@/public/szkola1.jpg";
-import Hala3 from "@/public/szkola2.jpg";
-import Hala4 from "@/public/szkola3.jpg";
-import Hala5 from "@/public/szkola4.jpg";
+// import Hala2 from "@/public/szkola1.jpg";
+import Hala2 from "@/public/szkola1_update.png";
+// import Hala3 from "@/public/szkola2.jpg";
+import Hala3 from "@/public/szkola2_update.png";
+// import Hala4 from "@/public/szkola3.jpg";
+import Hala4 from "@/public/szkola3_update.png";
+// import Hala5 from "@/public/szkola4.jpg";
+import Hala5 from "@/public/szkola4_update.png";
 import LocationsImage from "@/public/LOKALIZACJE_mapa.svg";
 import Link from "next/link";
 
