@@ -100,7 +100,7 @@ export default function Regulations() {
         <h2 className="font-semibold">§ 5. Zasady płatności</h2>
         <ol className="list-decimal pl-12">
           <li>
-            Wysokość miesięcznej składki członkowskiej wynosi 160 zł. Opłata
+            Wysokość miesięcznej składki członkowskiej wynosi 200 zł. Opłata
             obejmuje udział w ośmiu sesjach treningowych zgodnie z
             harmonogramem. <br />
             <br />
