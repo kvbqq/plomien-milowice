@@ -48,14 +48,14 @@ export default function Regulations() {
             <br />
           </li>
           <li>
-            Miesięczna opłata stanowi składkę członkowską związaną z
+            Miesięczna opłata jest jednocześnie składką członkowską związaną z
             przynależnością do sekcji piłki siatkowej klubu M.T.S Płomień
             Milowice. <br />
             <br />
           </li>
           <li>
             Członek Akademii zobowiązany jest do przestrzegania niniejszego
-            regulaminu oraz regulaminów poszczególnych zajęć. <br />
+            regulaminu oraz regulaminów zajęć. <br />
             <br />
           </li>
           <li>
@@ -68,13 +68,13 @@ export default function Regulations() {
         <h2 className="font-semibold">§ 3. Uczestnictwo w zajęciach</h2>
         <ol className="list-decimal pl-12">
           <li>
-            Członkowie Akademii uczestniczą w zajęciach sportowych pod nadzorem
-            wykwalifikowanej kadry trenerskiej. <br />
+            Zajęcia w Akademii prowadzone są przez wykwalifikowaną kadrę
+            trenerską. <br />
             <br />
           </li>
           <li>
-            Grupy treningowe tworzone są na podstawie wieku oraz umiejętności
-            podopiecznych. <br />
+            O przynależności do grup treningowych decyduje kadra trenerska na
+            podstawie wieku oraz umiejętności podopiecznych. <br />
             <br />
           </li>
         </ol>
@@ -84,15 +84,16 @@ export default function Regulations() {
           <li>
             Zajęcia sportowe odbywają się na obiektach zlokalizowanych w: <br />
             (1) Hala Sportowa, ul. Baczyńskiego 4, 41-203 Sosnowiec <br />
-            (2) Szkoła Podstawowa nr 32, ul. Armii Krajowej 93, 41-215 Sosnowiec{" "}
-            <br />
-            (3) CKZiU Technikum nr 6, ul Legionów 9, 41-200 Sosnowiec <br />
+            (2) CKZiU Technikum nr 6, ul Legionów 9, 41-200 Sosnowiec <br />
+            (3) Miejska Szkoła Podstawowa Nr 5 im. Wawrzyńca Hajdy w Piekarach
+            Śląskich, ul. F. Chopina 11, 41-940 Piekary Śląskie <br />
+            (4) Miejska Szkoła Podstawowa Nr 12 im. Jana Demarczyka w Piekarach
+            Śląskich, ul. Związkowa 14, 41-949 Piekary Śląskie <br />
             <br />
           </li>
           <li>
-            Zajęcia odbywają się w okresie dwa razy w tygodniu po 60-90 minut, w
-            ustalonych godzinach, z wyjątkiem dni ustawowo wolnych od pracy oraz
-            przerw szkolnych. <br />
+            Zajęcia odbywają się na podstawie przygotowanego harmonogramu zajęć,
+            dostępnego na platformie Sportsmanago.pl. <br />
             <br />
           </li>
         </ol>
@@ -100,14 +101,8 @@ export default function Regulations() {
         <h2 className="font-semibold">§ 5. Zasady płatności</h2>
         <ol className="list-decimal pl-12">
           <li>
-            Wysokość miesięcznej składki członkowskiej wynosi 200 zł. Opłata
-            obejmuje udział w ośmiu sesjach treningowych zgodnie z
-            harmonogramem. <br />
-            <br />
-          </li>
-          <li>
             Wysokość miesięcznej składki członkowskiej określana jest przez
-            Akademię. <br />
+            Zarząd Akademii. <br />
             <br />
           </li>
           <li>
@@ -378,7 +373,7 @@ export default function Regulations() {
             <br />
             <br />
           </li>
-          <li>Regulamin wchodzi w życie z dniem 1 sierpnia 2024 r.</li>
+          <li>Regulamin wchodzi w życie z dniem 1 września 2025 r.</li>
         </ol>
       </section>
     </main>
