@@ -116,21 +116,21 @@ export const Offer = () => {
                 }`}
               >
                 <div>
-                  <h2 className={"mb-1 text-custom-gold"}>Sosnowiec</h2>
+                  {/* <h2 className={"mb-1 text-custom-gold"}>Sosnowiec</h2> */}
                   <p className={"flex items-center space-x-2"}>
                     <span className={"line-through"}>280 zł</span>{" "}
                     <GoArrowRight />
                     <span className={"text-custom-gold"}>200 zł</span>
                   </p>
                 </div>
-                <div>
+                {/* <div>
                   <h2 className={"mb-1 text-custom-gold"}>Piekary Śląskie</h2>
                   <p className={"flex items-center space-x-2"}>
                     <span className={"line-through"}>240 zł</span>{" "}
                     <GoArrowRight />
                     <span className={"text-custom-gold"}>160 zł</span>
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
             <Button text="Dołącz do akademii" href="zapisy" />
