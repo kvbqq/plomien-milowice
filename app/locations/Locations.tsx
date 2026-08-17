@@ -9,13 +9,15 @@ import Hala1 from "@/public/about-hala-2.webp";
 // import Hala2 from "@/public/szkola1_update.png";
 import Hala2 from "@/public/technikum_4.png";
 // import Hala3 from "@/public/szkola2.jpg";
-import Hala3 from "@/public/szkola2_update.png";
+import Hala3 from "@/public/sosnowiec_3.jpg";
 // import Hala4 from "@/public/szkola3.jpg";
 // import Hala4 from "@/public/szkola3_update.png";
-import Hala4 from "@/public/piekary_1.png";
+import Hala4 from "@/public/piekary_1.jpg";
 // import Hala5 from "@/public/szkola4.jpg";
 // import Hala5 from "@/public/szkola4_update.png";
-import Hala5 from "@/public/piekary_2.png";
+import Hala5 from "@/public/piekary_2.jpg";
+import Hala6 from "@/public/dabie_1.png";
+import Hala7 from "@/public/sosnowiec_4.png";
 import LocationsImage from "@/public/LOKALIZACJE_mapa.svg";
 import Link from "next/link";
 
@@ -46,8 +48,8 @@ const LocationCard = ({
       />
       <div className={`p-3`}>
         <h2 className={`pb-1 text-sm font-semibold`}>{title}</h2>
-        <p className={`pb-3 text-xs font-semibold`}>{address}</p>
-        <ul className={`flex gap-1`}>
+        <p className={`pb-1 text-xs font-semibold`}>{address}</p>
+        {/* <ul className={`flex gap-1`}>
           {groups.map((group, i) => (
             <li
               className={
@@ -55,10 +57,10 @@ const LocationCard = ({
               }
               key={i}
             >
-              {group}
+             {group}
             </li>
           ))}
-        </ul>
+        </ul> */}
       </div>
     </Link>
   );
@@ -117,8 +119,14 @@ const LocationCards = () => {
           />
           <LocationCard
             image={Hala3}
-            title={"Sportowa Szkoła Podstawowa nr 17"}
-            address={"ul. Zamkowa 17"}
+            title={"Szkoła Podstawowa nr 12"}
+            address={"ul. Baczyńskiego 14"}
+            groups={["Iskry", "Płomyki", "Kinder", "Młodzik", "Talent"]}
+          />
+          <LocationCard
+            image={Hala7}
+            title={"ZSP Twoja Przyszłość"}
+            address={"ul. Zegadłowicza 12"}
             groups={["Iskry", "Płomyki", "Kinder", "Młodzik", "Talent"]}
           />
         </div>
@@ -142,6 +150,22 @@ const LocationCards = () => {
             address={"ul. Związkowa 14"}
             groups={["Płomyki", "Kinder", "Młodzik"]}
           />
+        </div>
+      </div>
+      <div className={`flex flex-col gap-5`}>
+        <h1 className={`text-2xl font-semibold`}>Dąbie</h1>
+        <div className={`grid w-[17.75rem] grid-cols-1`}>
+          <LocationCard
+            image={Hala6}
+            title={"Szkoła Podstawowa im. T. Kościuszki "}
+            address={"ul. Pocztowa 39"}
+            groups={["Iskry", "Płomyki", "Kinder", "Młodzik"]}
+          />
+          <p
+            className={`mt-2 text-center py-3 font-semibold text-sm text-white bg-gradient-to-t from-nav-bg-start to-nav-bg-end rounded-3xl`}
+          >
+            START - PAŹDZIERNIK 2026
+          </p>
         </div>
       </div>
     </article>
