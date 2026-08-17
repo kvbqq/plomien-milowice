@@ -9,7 +9,8 @@ import { secondSliderElements } from "@/constants/constants";
 
 import { Button } from "@/components/button/Button";
 import { GoArrowRight } from "react-icons/go";
-import Logo from "@/public/plomien-milowice-logo.webp";
+// import Logo from "@/public/plomien-milowice-logo.webp";
+import Logo from "@/public/Logo_akademia_kolor.webp";
 
 const GroupCard = ({
   title,
@@ -89,10 +90,10 @@ export const Offer = () => {
                 : "flex flex-col items-center space-y-5"
             }`}
           >
-            <GroupCard title="Iskry" yearsList={["2017", "2018", "2019"]} />
-            <GroupCard title="Płomyki" yearsList={["2015", "2016"]} />
-            <GroupCard title="Kinder" yearsList={["2013", "2014"]} />
-            <GroupCard title="Młodzik" yearsList={["2011", "2012"]} />
+            <GroupCard title="Iskry" yearsList={["2018", "2019", "2020"]} />
+            <GroupCard title="Płomyki" yearsList={["2016", "2017"]} />
+            <GroupCard title="Kinder" yearsList={["2014", "2015"]} />
+            <GroupCard title="Młodzik" yearsList={["2011", "2012", "2013"]} />
             {isDesktop ? <GroupLogo /> : null}
             <GroupCard title="Talent" yearsList={["2008", "2009", "2010"]} />
           </div>
