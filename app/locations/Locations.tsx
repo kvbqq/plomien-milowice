@@ -47,7 +47,7 @@ const LocationCard = ({
         className={"w-full h-44 rounded-3xl"}
       />
       <div className={`p-3`}>
-        <h2 className={`pb-1 text-sm font-semibold`}>{title}</h2>
+        <h2 className={`pb-1 text-[13px] font-semibold`}>{title}</h2>
         <p className={`pb-1 text-xs font-semibold`}>{address}</p>
         {/* <ul className={`flex gap-1`}>
           {groups.map((group, i) => (
@@ -131,41 +131,56 @@ const LocationCards = () => {
           />
         </div>
       </div>
-      <div className={`flex flex-col gap-5`}>
-        <h1 className={`text-2xl font-semibold`}>Piekary Śląskie</h1>
-        <div
-          className={`grid gap-4 ${
-            isDesktop ? "w-full grid-cols-3" : "w-[17.75rem] grid-cols-1"
-          }`}
-        >
-          <LocationCard
-            image={Hala4}
-            title={"Miejska Szkoła Podstawowa nr 5"}
-            address={"ul. Chopina 11"}
-            groups={["Iskry", "Płomyki", "Kinder", "Młodzik"]}
-          />
-          <LocationCard
-            image={Hala5}
-            title={"Miejska Szkoła Podstawowa nr 12"}
-            address={"ul. Związkowa 14"}
-            groups={["Płomyki", "Kinder", "Młodzik"]}
-          />
-        </div>
-      </div>
-      <div className={`flex flex-col gap-5`}>
-        <h1 className={`text-2xl font-semibold`}>Dąbie</h1>
-        <div className={`grid w-[17.75rem] grid-cols-1`}>
-          <LocationCard
-            image={Hala6}
-            title={"Szkoła Podstawowa im. T. Kościuszki "}
-            address={"ul. Pocztowa 39"}
-            groups={["Iskry", "Płomyki", "Kinder", "Młodzik"]}
-          />
-          <p
-            className={`mt-2 text-center py-3 font-semibold text-sm text-white bg-gradient-to-t from-nav-bg-start to-nav-bg-end rounded-3xl`}
+      <div
+        className={
+          isDesktop ? "grid w-full grid-cols-3 gap-4" : "flex flex-col gap-14"
+        }
+      >
+        {/* PIEKARY ŚLĄSKIE */}
+        <div className={`flex flex-col gap-5 ${isDesktop ? "col-span-2" : ""}`}>
+          <h1 className="text-2xl font-semibold">Piekary Śląskie</h1>
+
+          <div
+            className={`grid gap-4 ${
+              isDesktop ? "w-full grid-cols-2" : "w-[17.75rem] grid-cols-1"
+            }`}
           >
-            START - PAŹDZIERNIK 2026
-          </p>
+            <LocationCard
+              image={Hala4}
+              title="Miejska Szkoła Podstawowa nr 5"
+              address="ul. Chopina 11"
+              groups={["Iskry", "Płomyki", "Kinder", "Młodzik"]}
+            />
+
+            <LocationCard
+              image={Hala5}
+              title="Miejska Szkoła Podstawowa nr 12"
+              address="ul. Związkowa 14"
+              groups={["Płomyki", "Kinder", "Młodzik"]}
+            />
+          </div>
+        </div>
+
+        {/* DĄBIE */}
+        <div className="flex flex-col gap-5">
+          <h1 className="text-2xl font-semibold">Dąbie</h1>
+
+          <div
+            className={`grid grid-cols-1 ${
+              isDesktop ? "w-full" : "w-[17.75rem]"
+            }`}
+          >
+            <LocationCard
+              image={Hala6}
+              title="Szkoła Podstawowa im. T. Kościuszki"
+              address="ul. Pocztowa 39"
+              groups={["Iskry", "Płomyki", "Kinder", "Młodzik"]}
+            />
+
+            <p className="mt-2 rounded-3xl bg-gradient-to-t from-nav-bg-start to-nav-bg-end py-3 text-center text-sm font-semibold text-white">
+              START - PAŹDZIERNIK 2026
+            </p>
+          </div>
         </div>
       </div>
     </article>
