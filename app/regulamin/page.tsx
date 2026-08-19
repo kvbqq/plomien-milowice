@@ -12,9 +12,10 @@ export default function Regulations() {
           isDesktop ? "w-[60rem]" : "w-[90%]"
         }  flex flex-col gap-5 text-lg`}
       >
-        <h1 className="mb-10 font-semibold text-center text-xl">
-          Regulamin <br /> członkostwa w stowarzyszeniu Projekt Zagłębie
-          Akademia Siatkówki Płomień Milowice
+        <h1 className="mb-10 text-center text-xl font-semibold">
+          Regulamin <br />
+          członkostwa w stowarzyszeniu M.T.S. <br />
+          Płomień Milowice Akademia Siatkówki
         </h1>
         <h2 className="font-semibold">§ 1. Postanowienia ogólne</h2>
         <ol className="list-decimal pl-12">
@@ -80,20 +81,33 @@ export default function Regulations() {
         </ol>
 
         <h2 className="font-semibold">§ 4. Miejsce i czas zajęć</h2>
+
         <ol className="list-decimal pl-12">
           <li>
-            Zajęcia sportowe odbywają się na obiektach zlokalizowanych w: <br />
-            (1) Hala Sportowa, ul. Baczyńskiego 4, 41-203 Sosnowiec <br />
-            (2) CKZiU Technikum nr 6, ul Legionów 9, 41-200 Sosnowiec <br />
-            (3) Miejska Szkoła Podstawowa Nr 5 im. Wawrzyńca Hajdy w Piekarach
-            Śląskich, ul. F. Chopina 11, 41-940 Piekary Śląskie <br />
-            (4) Miejska Szkoła Podstawowa Nr 12 im. Jana Demarczyka w Piekarach
-            Śląskich, ul. Związkowa 14, 41-949 Piekary Śląskie <br />
+            Zajęcia sportowe odbywają się na obiektach zlokalizowanych w:
+            <br />
+            (1) Hala Sportowa, ul. Baczyńskiego 4, 41-203 Sosnowiec
+            <br />
+            (2) CKZiU Technikum nr 6, ul Legionów 9, 41-200 Sosnowiec
+            <br />
+            (3) Szkoła Podstawowa nr 12, 41-203 Sosnowiec
+            <br />
+            (4) Zespół Szkół Prywatnych &quot;Twoja Przyszłość&quot;, ul.
+            Zegadłowicza 1, 41-200 Sosnowiec
+            <br />
+            (5) Miejska Szkoła Podstawowa Nr 5 im. Wawrzyńca Hajdy w Piekarach
+            Śląskich, ul. F. Chopina 11, 41-940 Piekary Śląskie
+            <br />
+            (6) Miejska Szkoła Podstawowa Nr 12 im. Jana Demarczyka w Piekarach
+            Śląskich, ul. Związkowa 14, 41-949 Piekary Śląskie
+            <br />
             <br />
           </li>
+
           <li>
             Zajęcia odbywają się na podstawie przygotowanego harmonogramu zajęć,
-            dostępnego na platformie Sportsmanago.pl. <br />
+            dostępnego na platformie Sportsmanago.pl.
+            <br />
             <br />
           </li>
         </ol>
@@ -271,7 +285,7 @@ export default function Regulations() {
             <br />
           </li>
           <li>
-            . Akademia może anulować członkostwo w trybie natychmiastowym bez
+            Akademia może anulować członkostwo w trybie natychmiastowym bez
             okresu wypowiedzenia, jeżeli:
           </li>
           <ol className="list-[lower-alpha] pl-12">

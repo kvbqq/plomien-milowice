@@ -126,7 +126,7 @@ const LocationCards = () => {
           <LocationCard
             image={Hala7}
             title={"ZSP Twoja Przyszłość"}
-            address={"ul. Zegadłowicza 12"}
+            address={"ul. Zegadłowicza 1"}
             groups={["Iskry", "Płomyki", "Kinder", "Młodzik", "Talent"]}
           />
         </div>
