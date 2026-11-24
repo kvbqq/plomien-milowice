@@ -162,7 +162,7 @@ const LocationCards = () => {
         </div>
 
         {/* DĄBIE */}
-        <div className="flex flex-col gap-5">
+        {/* <div className="flex flex-col gap-5">
           <h1 className="text-2xl font-semibold">Dąbie</h1>
 
           <div
@@ -181,7 +181,7 @@ const LocationCards = () => {
               START - PAŹDZIERNIK 2026
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </article>
   );
