@@ -5,11 +5,27 @@ import Image, { StaticImageData } from "next/image";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import React, { ReactNode } from "react";
 
-import AgataK from "@/public/agata-kopczyk.jpg";
-import AgnieszkaL from "@/public/agnieszka-legien.jpg";
-import PaulinaB from "@/public/paulina-baltrukiewicz.png";
-import NadiaP from "@/public/nadia-peszko.jpg";
-import AngelikaD from "@/public/angelika.png";
+// import AgataK from "@/public/agata-kopczyk.jpg";
+// import AgnieszkaL from "@/public/agnieszka-legien.jpg";
+// import PaulinaB from "@/public/paulina-baltrukiewicz.png";
+// import NadiaP from "@/public/nadia-peszko.jpg";
+// import AngelikaD from "@/public/angelika.png";
+
+import AgataK from "@/public/akopczyk.png";
+import AgnieszkaL from "@/public/alegien.png";
+import PaulinaM from "@/public/pmatuszek.png";
+import AleksandraR from "@/public/araszewska.png";
+import NadiaP from "@/public/npeszko.png";
+import AngelikaD from "@/public/adanielik.png";
+import RafalL from "@/public/rlegien.png";
+import DominikU from "@/public/durbanski.png";
+import OliwiaB from "@/public/obiodrowicz.png";
+import OrianaK from "@/public/oklosa.png";
+import UlaD from "@/public/udera.png";
+
+import MarekP from "@/public/mparzych.png";
+import MarcinZ from "@/public/mziaja.png";
+import JudytaP from "@/public/jparzych.png";
 
 interface CoachCardProps {
   image: StaticImageData;
@@ -78,13 +94,13 @@ export default function CoachesInfo() {
         className={"pt-36 pb-28 flex flex-col gap-10 items-center bg-white"}
       >
         <h1
-          className={`pt-10 text-2xl font-semibold ${
+          className={`pt-5 text-2xl font-semibold ${
             isDesktop ? "w-[55rem]" : "text-center"
           }`}
         >
           Nasi trenerzy
         </h1>
-        <CoachCard
+        {/* <CoachCard
           image={AgataK}
           name="Agata Kopczyk"
           text="Założycielka Akademii Siatkówki Płomień Milowice. Jako była siatkarka, wielokrotnie zdobywała Mistrzostwo Polski. Razem z Płomieniem Milowice zdobyła Wicemistrzostwo oraz brązowy medal Mistrzostw Polski. Wielokrotna reprezentantka Polski. Po zakończeniu kariery sportowej poświęciła się trenowaniu młodzieży. Razem ze swoimi drużynami wielokrotnie osiągała liczne sukcesy na wielu turniejach ogólnopolskich, w tym Mistrzostwach Polski. Jej podopieczne regularnie występują w Tauron Lidze i reprezentują kraj na arenie międzynarodowej. Trenerka Agata z pasją i profesjonalizmem rozwija umiejętności sportowe młodzieży, budując ich charakter i promując zasady fair play. Tworzy otwartą, wspierającą atmosferę, stale doskonaląc swoje metody treningowe."
@@ -113,7 +129,119 @@ export default function CoachesInfo() {
           name="Angelika Danielik"
           text="Trenerka Angelika Danielik to młoda, ambitna trenerka, która wnosi do Akademii świeżość i nowoczesne podejście. Ukończyła studia I stopnia na AWF w Katowicach na kierunku Sport, specjalizując się w przygotowaniu motorycznym, i kontynuuje naukę na kierunku Wychowanie Fizyczne. Jej wiedza oraz umiejętności, potwierdzone certyfikatem trenera piłki siatkowej PZPS, umożliwiają jej prowadzenie treningów na wysokim poziomie. Jako była zawodniczka MUKS Dargfil Tomaszów Mazowiecki, osiągnęła liczne sukcesy w siatkówce młodzieżowej, w tym Wicemistrzostwo Polski Kadetek. Trenerka Angelika doskonale rozumie potrzeby młodych sportowców, a jej profesjonalne podejście łączy z entuzjazmem, co sprawia, że treningi z nią są nie tylko efektywne, ale także bardzo inspirujące."
           isEven={false}
-        />
+        /> */}
+        <h2 className="text-xl font-bold text-center text-[#113758]">
+          Sosnowiec
+        </h2>
+        <div
+          className={`grid gap-4 ${
+            isDesktop ? "w-[55rem] grid-cols-3" : "w-[17.75rem] grid-cols-1"
+          }`}
+        >
+          <Image
+            src={AgataK}
+            alt={"Agata Kopczyk"}
+            width={3307}
+            height={4724}
+          />
+          <Image
+            src={AgnieszkaL}
+            alt={"Agnieszka Legień"}
+            width={3307}
+            height={4724}
+          />
+          <Image src={RafalL} alt={"Rafał Legień"} width={3307} height={4724} />
+          <Image
+            src={AngelikaD}
+            alt={"Angelika Danielik"}
+            width={3307}
+            height={4724}
+          />
+          <Image
+            src={DominikU}
+            alt={"Dominik Urbański"}
+            width={3307}
+            height={4724}
+          />
+          <Image
+            src={OliwiaB}
+            alt={"Oliwia Biodrowicz"}
+            width={3307}
+            height={4724}
+          />
+          <Image
+            src={OrianaK}
+            alt={"Oriana Kłosa"}
+            width={3307}
+            height={4724}
+          />
+          <Image src={UlaD} alt={"Ula Dera"} width={3307} height={4724} />
+        </div>
+
+        <h2 className="mt-12 text-xl font-bold text-center text-[#113758]">
+          Piekary Śląskie
+        </h2>
+        <div
+          className={`grid gap-4 ${
+            isDesktop ? "w-[55rem] grid-cols-3" : "w-[17.75rem] grid-cols-1"
+          }`}
+        >
+          <Image
+            src={MarekP}
+            alt={"Marek Parzych"}
+            width={3307}
+            height={4724}
+          />
+          <Image
+            src={MarcinZ}
+            alt={"Marcin Ziaja"}
+            width={3307}
+            height={4724}
+          />
+          <Image
+            src={JudytaP}
+            alt={"Judyta Parzych"}
+            width={3307}
+            height={4724}
+          />
+        </div>
+
+        <h2 className="mt-12 text-xl font-bold text-center text-[#113758]">
+          Przygotowanie motoryczne
+        </h2>
+        <div
+          className={`grid gap-4 ${
+            isDesktop
+              ? "w-[55rem] grid-cols-[repeat(2,calc((100%_-_2rem)/3))] justify-center"
+              : "w-[17.75rem] grid-cols-1"
+          }`}
+        >
+          <Image
+            src={PaulinaM}
+            alt={"Paulina Matuszek"}
+            width={3307}
+            height={4724}
+          />
+          <Image
+            src={AleksandraR}
+            alt={"Aleksandra Raszewska"}
+            width={3307}
+            height={4724}
+          />
+        </div>
+
+        <h2 className="mt-12 text-xl font-bold text-center text-[#113758]">
+          Psycholog sportowy
+        </h2>
+        <div
+          className={`grid gap-4 ${
+            isDesktop
+              ? "w-[55rem] grid-cols-[calc((100%_-_2rem)/3)] justify-center"
+              : "w-[17.75rem] grid-cols-1"
+          }`}
+        >
+          <Image src={NadiaP} alt={"Nadia Peszko"} width={3307} height={4724} />
+        </div>
       </section>
     </main>
   );
